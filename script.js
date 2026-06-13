@@ -2,40 +2,78 @@
 // SEARCH FUNCTION
 // =========================
 
+
 const searchBox = document.getElementById("searchBox");
+const resultsBox = document.getElementById("search-results");
 
-if (searchBox) {
+searchBox.addEventListener("keyup", function () {
 
-  searchBox.addEventListener("keyup", function () {
+  const value = this.value.toLowerCase().trim();
 
-    let value = this.value.toLowerCase();
+  resultsBox.innerHTML = "";
 
-    const seen = new Set();
+  if (value === "") {
 
-document.querySelectorAll(".card, .game-card").forEach(card => {
+    resultsBox.style.display = "none";
+  
+    document.querySelectorAll(".category-box,.category-box-2,.category-box-6")
+      .forEach(el => el.style.display = "");
+  
+    document.querySelectorAll(".game-card").forEach(card => {
+      card.style.display = "";
+    });
+  
+    return;
+    
+  }
 
-    let text = card.innerText.toLowerCase().trim();
+  document.querySelectorAll(".game-card").forEach(card => {
 
-    if (seen.has(text)) {
-        card.style.display = "none";
-        return;
+    const text = card.innerText.toLowerCase();
+  
+    const cleanText = text.replace(/\s/g,'');
+    const cleanValue = value.replace(/\s/g,'');
+  
+    const matched =
+  
+      text.includes(value) ||
+  
+      value.includes(text) ||
+  
+      cleanText.includes(cleanValue) ||
+  
+      text.split(" ").some(word =>
+        word.startsWith(cleanValue)
+      );
+  
+    if (matched) {
+  
+      resultsBox.appendChild(card.cloneNode(true));
+  
     }
+  
+  });
 
-    seen.add(text);
+  resultsBox.style.display = "flex";
+  const seen = new Set();
 
-    if (text.includes(value)) {
-        card.style.display = "";
-    } else {
-        card.style.display = "none";
-    }
+document.querySelectorAll(".game-card").forEach(card => {
+
+  let text = card.innerText.toLowerCase().trim();
+
+  if (seen.has(text)) {
+    card.style.display = "none";
+    return;
+  }
+
+  seen.add(text);
+
+  card.style.display =
+    text.includes(value) ? "" : "none";
 
 });
 
-
-
-    });
-
-}
+});
 
 // =========================
 // SCROLL PROGRESS BAR
