@@ -834,6 +834,10 @@ body {
 .slider-wrapper:hover .slider-hint.right{
   transform:translateY(-50%) translateX(0);
 }
+.section-desc{
+  font-size:14px !important;
+  font-weight:500;
+}
 
 /* Mobile pe hide */
 /* Yha mobile viewe set ho rha hai */
