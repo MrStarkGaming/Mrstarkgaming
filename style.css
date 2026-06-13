@@ -717,115 +717,8 @@ body {
 
   margin-bottom: 35px;
 }
-.category-box-3 {
-  width: 85%;
-  padding: 12px 20px;
-  margin-bottom: 8px; /* pehle 15px ya zyada hoga */
-  padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
 
-  background: linear-gradient(
-    90deg,
-    rgba(255, 0, 0, 0.15),
-    rgba(255, 0, 0, 0.05)
-  );
-
-  border-left: 4px solid #ff2a2a;
-  border-right: 4px solid #ff2a2a;
-  border-top: 1px solid rgba(255, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(255, 0, 0, 0.3);
-
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 700;
-
-  text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
-
-  margin-bottom: 35px;
-}
-.category-box-4 {
-  width: 85%;
-  padding: 12px 20px;
-  margin-bottom: 8px; /* pehle 15px ya zyada hoga */
-  padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
-
-  background: linear-gradient(
-    90deg,
-    rgba(0, 50, 78, 0.15),
-    rgba(0, 14, 59, 0.3)
-  );
-
-  border-left: 4px solid #00bfff;
-  border-right: 4px solid #00bfff;
-  border-top: 1px solid rgb(0, 191, 255, 0.3);
-  border-bottom: 1px solid rgb(0, 191, 255, 0.3);
-
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 700;
-  text-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
-
-  margin-bottom: 35px;
-}
-.category-box-5 {
-  width: 85%;
-  padding: 12px 20px;
-  margin-bottom: 8px; /* pehle 15px ya zyada hoga */
-  padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
-
-  background: linear-gradient(
-    90deg,
-    rgba(255, 0, 0, 0.15),
-    rgba(255, 0, 0, 0.05)
-  );
-
-  border-left: 4px solid #ff2a2a;
-  border-right: 4px solid #ff2a2a;
-  border-top: 1px solid rgba(255, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(255, 0, 0, 0.3);
-
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 700;
-
-  text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
-  box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
-
-  margin-bottom: 35px;
-}
-.category-box-6 {
-  width: 85%;
-  padding: 12px 20px;
-  margin-bottom: 8px; /* pehle 15px ya zyada hoga */
-  padding: 10px 20px;
-  margin-left: auto;
-  margin-right: auto;
-
-  background: linear-gradient(
-    90deg,
-    rgba(0, 50, 78, 0.15),
-    rgba(0, 14, 59, 0.3)
-  );
-
-  border-left: 4px solid #00bfff;
-  border-right: 4px solid #00bfff;
-  border-top: 1px solid rgb(0, 191, 255, 0.3);
-  border-bottom: 1px solid rgb(0, 191, 255, 0.3);
-
-  color: #ffffff;
-  font-size: 25px;
-  font-weight: 700;
-  text-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
-
-  margin-bottom: 35px;
-}
-.category-box-7 h2 {
+.category-box-text h2 {
   width: 98%;
   padding: 3px 0px;
   margin: 0 auto 0px auto;
@@ -848,33 +741,13 @@ body {
   text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
 }
-.category-box-8 h2 {
+
+/* Edit ke liye */
+.category-box-textb h2 {
   width: 98%;
-  padding: 3px 8px;
-  margin: 0 auto 20px auto;
-
-  background: linear-gradient(
-    90deg,
-    rgba(0, 50, 78, 0.15),
-    rgba(0, 14, 59, 0.3)
-  );
-
-  border-left: 4px solid #00bfff;
-  border-right: 4px solid #00bfff;
-  border-top: 1px solid rgb(0, 191, 255, 0.3);
-  border-bottom: 1px solid rgb(0, 191, 255, 0.3);
-
-  color: #ffffff;
-  font-size: 42px; /* 25 se kam */
-  font-weight: 700;
-
-  text-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
-}
-.category-box-9 h2 {
-  width: 98%;
-  padding: 3px 8px;
-  margin: 0 auto 20px auto;
-
+  padding: 3px 0px;
+  margin: 0 auto 0px auto;
+  font-size: 32px !important;
   background: linear-gradient(
     90deg,
     rgba(0, 50, 78, 0.15),
@@ -893,6 +766,7 @@ body {
   text-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
   
 }
+
 /* =========================
    Slider Arrows
 ========================= */
@@ -1013,10 +887,6 @@ body {
   margin-left:0;
 }
 
-.nav-search{
-  flex-shrink:0;
-}
-
 .nav-search input{
   background: transparent !important;
   background-color: transparent !important;
@@ -1047,15 +917,15 @@ body {
 }
 
   /* Hamburger */
+  
   .nav-search{
     flex-shrink:0;
-  
     position:absolute;
-    right:65px;
+  
     top:50%;
     transform:translateY(-50%);
-  
-    width:160px;
+    right:55px;
+    width:210px;
     height:36px;
   
     z-index:1000;
@@ -1166,11 +1036,17 @@ font-size: 13px;
   
 }
 
-.category-box h2,
-.category-box h1{
-  font-size:38px !important;
+.category-box-text h2,
+.category-box-text h1{
+  font-size:25px !important;
   line-height:1.1;
   margin:10px 0 20px;
 }
+.category-box-textb h2,
+.category-box-textb h1{
+  font-size:25px !important;
+  line-height:1.1;
+  margin:10px 0 20px;
 }
 
+}
