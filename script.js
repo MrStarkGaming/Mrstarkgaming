@@ -132,7 +132,7 @@ window.addEventListener("scroll", () => {
   });
   
   // =========================
-  // TRENDING SLIDER
+  // PCTRENDING SLIDER
   // =========================
   
   const slider = document.getElementById("trending-slider");
@@ -226,4 +226,91 @@ loopSlider();
           paused = false;
       }, 3000);
   });
+}
+// =========================
+  // PCTRENDING SLIDER
+  // =========================
+  const androidSlider = document.getElementById("android-slider");
+
+if (androidSlider) {
+
+  let autoSpeed = 1;
+  let manualSpeed = 0;
+  let paused = false;
+  let touchTimeout;
+
+  function loopAndroidSlider() {
+
+    const halfWidth = androidSlider.scrollWidth / 2;
+
+    if (!paused) {
+      androidSlider.scrollLeft += autoSpeed;
+    }
+
+    if (manualSpeed !== 0) {
+      androidSlider.scrollLeft += manualSpeed;
+    }
+
+    if (androidSlider.scrollLeft >= halfWidth) {
+      androidSlider.scrollLeft -= halfWidth;
+    }
+
+    if (androidSlider.scrollLeft <= 0) {
+      androidSlider.scrollLeft += halfWidth;
+    }
+
+    requestAnimationFrame(loopAndroidSlider);
+  }
+
+  loopAndroidSlider();
+
+  androidSlider.addEventListener("mouseenter", () => {
+    paused = true;
+  });
+
+  androidSlider.addEventListener("mouseleave", () => {
+    paused = false;
+    manualSpeed = 0;
+  });
+
+  androidSlider.addEventListener("mousemove", (e) => {
+
+    const rect = androidSlider.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+
+    if (x < 120) {
+      manualSpeed = -3;
+    }
+    else if (x > rect.width - 120) {
+      manualSpeed = 3;
+    }
+    else {
+      manualSpeed = 0;
+    }
+  });
+
+  androidSlider.addEventListener("touchstart", () => {
+    paused = true;
+  });
+
+  androidSlider.addEventListener("touchmove", () => {
+
+    paused = true;
+
+    clearTimeout(touchTimeout);
+
+    touchTimeout = setTimeout(() => {
+      paused = false;
+    }, 3000);
+  });
+
+  androidSlider.addEventListener("touchend", () => {
+
+    clearTimeout(touchTimeout);
+
+    touchTimeout = setTimeout(() => {
+      paused = false;
+    }, 3000);
+  });
+
 }
