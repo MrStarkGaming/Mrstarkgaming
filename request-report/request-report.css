@@ -134,7 +134,7 @@
     }
     
     .container{
-    padding:15px;
+    padding:10px;
     }
     
     }/* Tablet */
@@ -147,6 +147,7 @@
     .overlay h1{
     font-size: 2rem;
     line-height: 1.2;
+    margin-top: 30px;
     }
     
     .overlay p{
@@ -156,6 +157,7 @@
     
     .container{
     padding: 15px;
+    
     }
     
     .info-box h2{
@@ -164,6 +166,7 @@
     
     .gaming-form{
     padding: 20px;
+    margin-bottom: 50px;
     }
     
     .gaming-form input,
@@ -183,11 +186,12 @@
     @media (max-width: 480px){
     
     .hero{
-    height: 30vh;
+    height: 15vh;
     }
     
     .overlay h1{
     font-size: 1.5rem;
+    margin-top: 50px;
     }
     
     .overlay p{
@@ -209,10 +213,12 @@
     
     .gaming-form{
     padding: 15px;
+    margin-bottom: 50px;
     }
     
     .gaming-form label{
     font-size: 0.9rem;
+    
     }
     
     .gaming-form input,
