@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thank You</title>
+<link rel="icon" type="image/png" href="https://res.cloudinary.com/dpewo7gkw/image/upload/q_auto/f_auto/v1781134672/Mr_Stark_Gmaing_Logo_maoggk.png">
+
+<style>
+
+body{
+    position:relative;
+    overflow-x:hidden;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+    margin:0;
+    padding:20px;
+
+    text-align:center;
+    color:white;
+
+    font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:url("https://res.cloudinary.com/dpewo7gkw/image/upload/q_auto/f_auto/v1781216505/19567_bsl99o.jpg")
+    center center/cover no-repeat;
+
+    filter:blur(12px);
+    transform:scale(1.15);
+
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:-1;
+}
+
+.box{
+    width:min(90%,800px);
+
+    padding:40px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:20px;
+
+    box-shadow:0 0 30px rgba(0,191,255,.2);
+}
+
+h1{
+    margin:0 0 20px;
+    color:#00bfff;
+    text-shadow:0 0 15px rgba(0,191,255,.8);
+}
+
+p{
+    max-width:650px;
+    line-height:1.8;
+    margin:0;
+}
+
+.home-btn{
+    display:inline-block;
+    margin-top:25px;
+
+    padding:14px 28px;
+
+    background:#00bfff;
+    color:#000;
+
+    text-decoration:none;
+    font-weight:700;
+
+    border-radius:10px;
+
+    box-shadow:0 0 15px rgba(0,191,255,.5);
+}
+
+@media(max-width:768px){
+
+    .box{
+        width:92%;
+        padding:25px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    p{
+        font-size:15px;
+    }
+
+    .home-btn{
+        width:100%;
+        box-sizing:border-box;
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+    <h1>About Us</h1>
+
+    <p>
+        MR STARK GAMING is a platform dedicated to gaming enthusiasts who love discovering new games, mods, guides, and gaming content.
+
+Our goal is to provide gamers with useful information about PC and Android games, including game details, screenshots, gameplay guides, and updates.
+
+We continuously work to improve our content and help players find exciting gaming experiences in one place.
+
+Thank you for visiting MR STARK GAMING and being part of our gaming community.
+
+    </p>
+</div>
+
+</body>
+</html>

@@ -101,6 +101,8 @@ window.addEventListener("scroll", () => {
   
   document.querySelectorAll(".games-grid").forEach(grid => {
 
+    if (!grid.parentNode) return;
+
     const leftArrow = document.createElement("div");
     leftArrow.className = "slider-hint left";
     leftArrow.innerHTML = "❮";
@@ -113,6 +115,7 @@ window.addEventListener("scroll", () => {
     wrapper.className = "slider-wrapper";
 
     grid.parentNode.insertBefore(wrapper, grid);
+
     wrapper.appendChild(leftArrow);
     wrapper.appendChild(rightArrow);
     wrapper.appendChild(grid);
@@ -172,183 +175,86 @@ window.addEventListener("scroll", () => {
   // =========================
   // PCTRENDING SLIDER
   // =========================
-  
-  const slider = document.getElementById("trending-slider");
+  ["trending-slider", "android-slider"].forEach(sliderId => {
 
-  if (slider) {
-  
-  
-      let autoSpeed = 1;
-      let manualSpeed = 0;
-  let paused = false;
-  let touchTimeout;
-  
-  function loopSlider() {
+    const slider = document.getElementById(sliderId);
 
-    const halfWidth = slider.scrollWidth / 2;
+    if (!slider) return;
 
-    if (!paused) {
-        slider.scrollLeft += autoSpeed;
+    let autoSpeed = 1;
+    let manualSpeed = 0;
+    let paused = false;
+    let touchTimeout;
+
+    function loopSlider() {
+
+        const halfWidth = slider.scrollWidth / 2;
+
+        if (!paused) {
+            slider.scrollLeft += autoSpeed;
+        }
+
+        if (manualSpeed !== 0) {
+            slider.scrollLeft += manualSpeed;
+        }
+
+        if (slider.scrollLeft >= halfWidth) {
+            slider.scrollLeft -= halfWidth;
+        }
+
+        if (slider.scrollLeft <= 0) {
+            slider.scrollLeft += halfWidth;
+        }
+
+        requestAnimationFrame(loopSlider);
     }
 
-    if (manualSpeed !== 0) {
-        slider.scrollLeft += manualSpeed;
-    }
+    loopSlider();
 
-    if (slider.scrollLeft >= halfWidth) {
-        slider.scrollLeft -= halfWidth;
-    }
+    slider.addEventListener("mouseenter", () => {
+        paused = true;
+    });
 
-    if (slider.scrollLeft <= 0) {
-        slider.scrollLeft += halfWidth;
-    }
-
-    requestAnimationFrame(loopSlider);
-}
-
-loopSlider();
-  
-  
-  // PC hover pause
-  
-  slider.addEventListener("mouseenter", () => {
-      paused = true;
-  });
-  
-  slider.addEventListener("mouseleave", () => {
-      paused = false;
-      manualSpeed = 0;
-  });
-  
-  
-  // Left Right edge movement
-  
-  slider.addEventListener("mousemove", (e) => {
-  
-      const rect = slider.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-  
-      if (x < 120) {
-        manualSpeed = -3;
-    }
-    else if (x > rect.width - 120) {
-        manualSpeed = 3;
-    }
-    else {
+    slider.addEventListener("mouseleave", () => {
+        paused = false;
         manualSpeed = 0;
-    }
-  });
-  
-  
-  // Mobile touch support
-  
-  slider.addEventListener("touchstart", () => {
-      paused = true;
-  });
-  
-  slider.addEventListener("touchmove", () => {
-      paused = true;
-  
-      clearTimeout(touchTimeout);
-  
-      touchTimeout = setTimeout(() => {
-          paused = false;
-      }, 3000);
-  });
-  
-  slider.addEventListener("touchend", () => {
-  
-      clearTimeout(touchTimeout);
-  
-      touchTimeout = setTimeout(() => {
-          paused = false;
-      }, 3000);
-  });
-}
-// =========================
-  // PCTRENDING SLIDER
-  // =========================
-  const androidSlider = document.getElementById("android-slider");
+    });
 
-if (androidSlider) {
+    slider.addEventListener("mousemove", (e) => {
 
-  let autoSpeed = 1;
-  let manualSpeed = 0;
-  let paused = false;
-  let touchTimeout;
+        const rect = slider.getBoundingClientRect();
+        const x = e.clientX - rect.left;
 
-  function loopAndroidSlider() {
+        if (x < 120) {
+            manualSpeed = -3;
+        } else if (x > rect.width - 120) {
+            manualSpeed = 3;
+        } else {
+            manualSpeed = 0;
+        }
+    });
 
-    const halfWidth = androidSlider.scrollWidth / 2;
+    slider.addEventListener("touchstart", () => {
+        paused = true;
+    });
 
-    if (!paused) {
-      androidSlider.scrollLeft += autoSpeed;
-    }
+    slider.addEventListener("touchmove", () => {
+        paused = true;
 
-    if (manualSpeed !== 0) {
-      androidSlider.scrollLeft += manualSpeed;
-    }
+        clearTimeout(touchTimeout);
 
-    if (androidSlider.scrollLeft >= halfWidth) {
-      androidSlider.scrollLeft -= halfWidth;
-    }
+        touchTimeout = setTimeout(() => {
+            paused = false;
+        }, 3000);
+    });
 
-    if (androidSlider.scrollLeft <= 0) {
-      androidSlider.scrollLeft += halfWidth;
-    }
+    slider.addEventListener("touchend", () => {
 
-    requestAnimationFrame(loopAndroidSlider);
-  }
+        clearTimeout(touchTimeout);
 
-  loopAndroidSlider();
+        touchTimeout = setTimeout(() => {
+            paused = false;
+        }, 3000);
+    });
 
-  androidSlider.addEventListener("mouseenter", () => {
-    paused = true;
-  });
-
-  androidSlider.addEventListener("mouseleave", () => {
-    paused = false;
-    manualSpeed = 0;
-  });
-
-  androidSlider.addEventListener("mousemove", (e) => {
-
-    const rect = androidSlider.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-
-    if (x < 120) {
-      manualSpeed = -3;
-    }
-    else if (x > rect.width - 120) {
-      manualSpeed = 3;
-    }
-    else {
-      manualSpeed = 0;
-    }
-  });
-
-  androidSlider.addEventListener("touchstart", () => {
-    paused = true;
-  });
-
-  androidSlider.addEventListener("touchmove", () => {
-
-    paused = true;
-
-    clearTimeout(touchTimeout);
-
-    touchTimeout = setTimeout(() => {
-      paused = false;
-    }, 3000);
-  });
-
-  androidSlider.addEventListener("touchend", () => {
-
-    clearTimeout(touchTimeout);
-
-    touchTimeout = setTimeout(() => {
-      paused = false;
-    }, 3000);
-  });
-
-}
+});

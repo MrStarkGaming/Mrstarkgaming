@@ -45,7 +45,8 @@ body {
 }
 
 .social-icons a {
-  width: 65px;
+  width: 25px;
+  height: 25px;
 }
 
 .stark-hero h1 {
@@ -142,6 +143,7 @@ body {
   border-radius: 8px;
 }
 .social-icons {
+  
   display: flex;
   flex-direction: row !important;
   justify-content: center;
@@ -307,7 +309,7 @@ body {
 }
 
 .logo img {
-  height: 45px;
+  height: 35px;
   width: auto;
   max-width: 250px;
   display: block;
@@ -364,7 +366,13 @@ body {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   margin-top: 30px;
 }
+li{
+  list-style: none;
+}
 @media (max-width: 768px) {
+  li{
+    list-style: none;
+  }
   .glass-nav {
     flex-direction: column;
     height: auto;
@@ -443,8 +451,8 @@ body {
 .nav-search{
   display:flex;
   align-items:center;
-  width:250px;
-  height:42px;
+  width:210px;
+  height:36px;
 
   background:rgba(255,255,255,.05);
   border:1px solid rgba(0,191,255,.35);
@@ -478,6 +486,7 @@ body {
   flex: 1;
   border: none;
   outline: none;
+  min-width:0; 
   background: transparent;
   font-size: 14px;
   padding: 0 16px;
@@ -492,8 +501,9 @@ body {
 }
 
 .nav-search button {
-  width: 50px;
-  height: 42px;
+  width:36px;
+  min-width:36px;
+  height:36px;
   border: none;
   cursor: pointer;
   background: linear-gradient(135deg, #00bfff, #0099ff);
@@ -654,14 +664,26 @@ body {
 
   width: 0%;
   height: 3px;
+  
 
-  background: linear-gradient(90deg, #ff3276, #00bfff, #32ff65);
+  background: linear-gradient(90deg,
+  #ff3276, 
+  #00bfff,
+  #32ff65
+   );
+  background-size:300% 100%;
+  animation:gradientMove 6s ease infinite;
 
   z-index: 999999;
 
   box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+  
 }
-
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
 .category-box {
   width: 85%;
   padding: 12px 20px;
@@ -837,10 +859,36 @@ body {
 .section-desc{
   font-size:14px !important;
   font-weight:500;
+
+}
+.game-category{
+  text-decoration: none;
+  color: white; /* ya jo color chahiye */
 }
 
 /* Mobile pe hide */
 /* Yha mobile viewe set ho rha hai */
+
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+  margin-bottom: 20px;
+}
+
+.footer-links a{
+  color:white;
+  text-decoration:none;
+  font-size:16px;
+  font-weight:600;
+
+}
+
+.footer-links a:hover{
+  color:#00bfff;
+}
 
 @media (max-width: 768px) {
     .slider-hint{
@@ -848,6 +896,10 @@ body {
     
 }
   /* Navbar */
+  .navbar{
+    padding:0 15px;
+  }
+
   .menu-btn{
     display:block !important;
     position:absolute;
@@ -929,7 +981,7 @@ body {
     top:50%;
     transform:translateY(-50%);
     right:55px;
-    width:210px;
+    width:160px;
     height:36px;
   
     z-index:1000;
@@ -986,7 +1038,7 @@ body {
   }
   .logo img {
     margin-right:auto;
-    height: 35px;
+    height: 30px;
     margin-top: 15px;
   }
 
@@ -1030,6 +1082,9 @@ font-size: 13px;
 .game-category{
   font-size:18px !important;
   margin-bottom:12px !important;
+  text-decoration: none;
+    color: white; /* ya jo color chahiye */
+
 }
 
 .category-box{

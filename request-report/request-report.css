@@ -1,0 +1,229 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    }
+    
+    body{
+        background:
+        linear-gradient(rgba(0,0,0,.80), rgba(0,0,0,.80)),
+        url("https://res.cloudinary.com/dpewo7gkw/image/upload/q_auto/f_auto/v1781216505/19567_bsl99o.jpg");
+    color:white;
+    }
+    
+    /* HERO */
+    
+    .hero{
+    height:20vh;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    }
+    
+    .overlay{
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.75);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    }
+    
+    .overlay h1{
+    font-size:3rem;
+    color: #00bfff;
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+    margin-bottom:15px;
+   
+    }
+    
+    .overlay p{
+    max-width:700px;
+    line-height:1.8;
+    font-size:1rem;
+    }
+    
+    /* CONTAINER */
+    
+    .container{
+    max-width:900px;
+    margin:50px auto;
+    padding:20px;
+    }
+    
+    .info-box{
+    background:#111;
+    border: 1px solid rgb(0, 191, 255);
+    padding:25px;
+    border-radius:15px;
+    margin-bottom:30px;
+    box-shadow:0 0 15px rgba(0, 191, 255, 0.5);
+    }
+    
+    .info-box h2{
+        color: #00bfff;
+        text-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+    margin-bottom:10px;
+    }
+    
+    .gaming-form{
+    background:#111;
+    padding:30px;
+    border-radius:15px;
+    box-shadow: 0 0 18px rgba(0, 191, 255, 0.527), 0 0 36px rgba(0, 191, 255, 0.6);
+    }
+    
+    .gaming-form label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    color: #00bfff;
+    text-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
+    }
+    
+    .gaming-form input,
+    .gaming-form select,
+    .gaming-form textarea{
+    width:100%;
+    padding:14px;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    background:#1b1b1b;
+    color:white;
+    }
+    
+    .gaming-form input:focus,
+    .gaming-form select:focus,
+    .gaming-form textarea:focus{
+        border: 1px solid rgb(0, 191, 255);
+    }
+    
+    .gaming-form button{
+    margin-top:25px;
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:10px;
+    background: #ff3b30;
+    box-shadow: 0 0 12px rgba(255, 59, 48, 0.6), 0 0 24px rgba(255, 59, 48, 0.4);
+    color: rgb(255, 255, 255);
+    font-size:1rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+    }
+
+    
+    .gaming-form button:hover{
+    transform:translateY(-3px);
+    background: #00bfff;
+    box-shadow: 0 0 18px rgba(0, 191, 255, 0.8), 0 0 36px rgba(0, 191, 255, 0.459);
+    }
+    
+    @media(max-width:768px){
+    
+    .overlay h1{
+    font-size:2rem;
+    }
+    
+    .container{
+    padding:15px;
+    }
+    
+    }/* Tablet */
+@media (max-width: 768px){
+
+    .hero{
+    height: 35vh;
+    }
+    
+    .overlay h1{
+    font-size: 2rem;
+    line-height: 1.2;
+    }
+    
+    .overlay p{
+    font-size: 0.9rem;
+    padding: 0 10px;
+    }
+    
+    .container{
+    padding: 15px;
+    }
+    
+    .info-box h2{
+    font-size: 1.3rem;
+    }
+    
+    .gaming-form{
+    padding: 20px;
+    }
+    
+    .gaming-form input,
+    .gaming-form select,
+    .gaming-form textarea{
+    font-size: 14px;
+    padding: 12px;
+    }
+    
+    .gaming-form button{
+    font-size: 15px;
+    padding: 14px;
+    }
+    }
+    
+    /* Mobile */
+    @media (max-width: 480px){
+    
+    .hero{
+    height: 30vh;
+    }
+    
+    .overlay h1{
+    font-size: 1.5rem;
+    }
+    
+    .overlay p{
+    font-size: 0.8rem;
+    line-height: 1.5;
+    }
+    
+    .info-box{
+    padding: 18px;
+    }
+    
+    .info-box h2{
+    font-size: 1.1rem;
+    }
+    
+    .info-box p{
+    font-size: 0.85rem;
+    }
+    
+    .gaming-form{
+    padding: 15px;
+    }
+    
+    .gaming-form label{
+    font-size: 0.9rem;
+    }
+    
+    .gaming-form input,
+    .gaming-form select,
+    .gaming-form textarea{
+    font-size: 13px;
+    padding: 10px;
+    }
+    
+    .gaming-form button{
+    font-size: 14px;
+    padding: 12px;
+    }
+    }

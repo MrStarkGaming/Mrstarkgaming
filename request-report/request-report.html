@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request & Report Hub</title>
+
+<link rel="icon" href="https://res.cloudinary.com/dpewo7gkw/image/upload/q_auto/f_auto/v1781134672/Mr_Stark_Gmaing_Logo_maoggk.png">
+
+<link rel="stylesheet" href="request-report.css">
+
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="overlay">
+        <h1>REQUEST & REPORT HUB</h1>
+        <p>
+            Can't find a game? Found a broken link?
+            Report issues, request games, and help improve MR STARK GAMING.
+        </p>
+    </div>
+</section>
+
+<section class="container">
+
+    <div class="info-box">
+        <h2>🎮 Community Support Center</h2>
+        <p>
+            Use this form to request new games, report download issues,
+            crash problems, missing files, or suggest updates.
+        </p>
+    </div>
+
+    <form id="gameForm" class="gaming-form">
+
+        <label>Your Email *</label>
+        <input type="email" id="email" placeholder="your@email.com" required>
+
+        <label>Request Type *</label>
+        <select id="requestType" required>
+            <option value="">Select Type</option>
+            <option>New Game Request</option>
+            <option>Broken Download Link</option>
+            <option>Game Crash / Error</option>
+            <option>Game Update Request</option>
+            <option>Other Issue</option>
+        </select>
+
+        <label>Game Name *</label>
+        <input type="text" id="gameName" placeholder="Enter Game Name" required>
+
+        <label>Description *</label>
+        <textarea id="description" rows="6" placeholder="Explain your request or issue..." required></textarea>
+
+        <label>Screenshot Link (Optional)</label>
+<input type="text" id="screenshot" placeholder="Paste Google Drive or Imgur Link">
+
+        <button type="submit">
+            🚀 Submit Request
+        </button>
+
+    </form>
+
+</section>
+
+
+
+  
+<script>
+document.getElementById("gameForm").addEventListener("submit", async function(e){
+
+    e.preventDefault();
+
+    const formURL =
+    "https://docs.google.com/forms/d/e/1FAIpQLSfpJPRHYYU3Kw5CRZxFQOYjkN_NLacz8M4GxPQG8r-Q9OkfCA/formResponse";
+
+    const data = new FormData();
+
+    data.append("entry.1582356728",
+        document.getElementById("email").value);
+
+    data.append("entry.536872370",
+        document.getElementById("requestType").value);
+
+    data.append("entry.104060538",
+        document.getElementById("gameName").value);
+
+    data.append("entry.1677447922",
+        document.getElementById("description").value);
+
+    data.append("entry.1421051940",
+        document.getElementById("screenshot").value);
+
+    try {
+
+        await fetch(formURL,{
+            method:"POST",
+            mode:"no-cors",
+            body:data
+        });
+
+       
+        window.location.href = "../thankyou.html";
+
+
+
+    } catch(err){
+
+        alert("❌ Submission Failed");
+
+        console.error(err);
+
+    }
+
+});
+</script>
+
+
+</body>
+</html>
