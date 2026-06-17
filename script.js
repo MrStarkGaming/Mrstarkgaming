@@ -51,7 +51,20 @@ searchBox.addEventListener("keyup", function () {
       resultsBox.appendChild(card.cloneNode(true));
   
     }
-  
+  if (resultsBox.children.length > 0) {
+
+    resultsBox.style.display = "flex";
+
+    resultsBox.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
+
+} else {
+
+    resultsBox.style.display = "none";
+
+}
   });
 
   resultsBox.style.display = "flex";
@@ -255,6 +268,21 @@ window.addEventListener("scroll", () => {
         touchTimeout = setTimeout(() => {
             paused = false;
         }, 3000);
+    });
+
+});
+
+// =========================
+// GO TO TOP
+// =========================
+
+const goTopBtn = document.getElementById("goTop");
+
+goTopBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
     });
 
 });
