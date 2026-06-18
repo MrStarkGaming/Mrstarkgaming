@@ -385,14 +385,7 @@ body {
   max-width: 1100px;
   margin: 40px auto;
 }
-.footer {
-  text-align: center;
-  padding: 25px;
-  color: #94a3b8;
-  font-size: 14px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  margin-top: 30px;
-}
+
 li{
   list-style: none;
 }
@@ -898,7 +891,14 @@ li{
 
 /* Mobile pe hide */
 /* Yha mobile viewe set ho rha hai */
-
+.footer {
+  text-align: center;
+  padding: 25px;
+  color: #94a3b8;
+  font-size: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  margin-top: 30px;
+}
 
 .footer-links{
   display:flex;
@@ -1268,5 +1268,22 @@ font-size: 13px;
   .help-btn i{
       font-size:22px;
   }
+/******************Footer*********/
+  .footer{
+    padding: 20px 15px;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  .footer-links{
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+
+  .footer-links a{
+    font-size: 14px;
+  }
 
 }
+
+
