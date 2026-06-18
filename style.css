@@ -1240,8 +1240,8 @@ font-size: 13px;
 }
 /* go to top btn */
   .floating-btn{
-      width:40px;
-      height:40px;
+      width:48px;
+      height:48px;
 
       font-size:18px;
 
@@ -1253,12 +1253,12 @@ font-size: 13px;
   }
 
   .top-btn{
-      bottom:70px;
+      bottom:80px;
   }
 
   .top-btn i,
   .help-btn i{
-      font-size:18px;
+      font-size:22px;
   }
 
 }
