@@ -286,3 +286,47 @@ goTopBtn.addEventListener("click", () => {
     });
 
 });
+// =========================
+// HERO BACKGROUND SLIDER
+// =========================
+
+const heroBg = document.querySelector(".hero-bg");
+
+if (heroBg) {
+
+    const images = [
+
+        "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4704690/163e2a742e5fb8e1f5d1e3a890da98f04ab809d4/header.jpg?t=1781108224",
+
+        "https://image.api.playstation.com/vulcan/ap/rnd/202507/1710/ecd54be57f89360d3ef7fa6f9b52c581d93b9ab11ab9e570.png",
+
+        "https://xboxwire.thesourcemediaassets.com/sites/2/2026/01/FH6_Evergreen_KeyArt_Branded-Horizontal_3840x2160-7591242f9c6791be6d45.jpg",
+
+        "https://xboxwire.thesourcemediaassets.com/sites/2/2025/06/Resident-Evil-Requiem-Grace-Key-Art-8dbdf81f6b8d5d66b5f0.jpg"
+
+    ];
+
+    let current = 0;
+
+    heroBg.style.backgroundImage = `url(${images[0]})`;
+
+    function changeHeroBg() {
+
+        heroBg.style.opacity = .05;
+
+        setTimeout(() => {
+
+            current = (current + 1) % images.length;
+
+            heroBg.style.backgroundImage =
+                `url(${images[current]})`;
+
+            heroBg.style.opacity = .25;
+
+        }, 700);
+
+    }
+
+    setInterval(changeHeroBg, 7000);
+
+}

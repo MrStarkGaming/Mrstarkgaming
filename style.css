@@ -24,8 +24,7 @@ body {
 .stark-hero {
   min-height: 65vh;
   padding-top: 80px;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("https://res.cloudinary.com/dpewo7gkw/image/upload/q_auto/f_auto/v1781216505/19567_bsl99o.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -42,6 +41,39 @@ body {
   backdrop-filter: blur(10px);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
   margin-bottom: 25px;
+}
+
+.hero-bg{
+  position:absolute;
+  inset:0;
+
+  background-size:cover;
+  background-position:center;
+
+  z-index:0;
+
+  opacity:.25;
+
+  filter:brightness(.4);
+
+  transition:opacity 1s ease;
+
+  animation:heroZoom 12s ease-in-out infinite alternate;
+}
+
+.overlay{
+  position:relative;
+  z-index:2;
+}
+
+@keyframes heroZoom{
+  from{
+      transform:scale(1);
+  }
+
+  to{
+      transform:scale(1.08);
+  }
 }
 
 
@@ -293,6 +325,8 @@ body {
 .stark-hero {
   background-size: cover;
   background-position: center 20%;
+  position:relative;
+  overflow:hidden;
 }
 .logo {
   justify-self: start;
@@ -1168,6 +1202,10 @@ font-size: 13px;
   max-width: 80%;
   height: auto;
 }
+.stark-hero{
+  min-height: 10vh;
+}
+
 .stark-hero p{
   font-size: 16px !important;
   line-height: 1.4;
