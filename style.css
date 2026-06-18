@@ -711,6 +711,9 @@ li{
   50%{background-position:100% 50%;}
   100%{background-position:0% 50%;}
 }
+
+
+
 .category-box {
   width: 85%;
   padding: 12px 20px;
@@ -884,7 +887,7 @@ li{
   transform:translateY(-50%) translateX(0);
 }
 .section-desc{
-  font-size:14px !important;
+  font-size:15px !important;
   font-weight:500;
 
 }
@@ -1027,6 +1030,11 @@ li{
   /* Navbar */
   .navbar{
     padding:0 15px;
+  }
+  .section-desc{
+    font-size:11px !important;
+    font-weight:500;
+  
   }
 
   .menu-btn{
