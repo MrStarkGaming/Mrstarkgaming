@@ -928,7 +928,7 @@ li{
 
 .floating-btn{
   position:fixed;
-  right:20px;
+  right:25px;
 
   width:58px;
   height:58px;
@@ -1000,7 +1000,7 @@ li{
 }
 
 .help-btn{
-  bottom:20px;
+  bottom:30px;
   background: #ff3b30;
     color:#ffffff;
 
@@ -1008,7 +1008,7 @@ li{
 }
 
 .top-btn{
-  bottom:90px;
+  bottom:100px;
   
   background:#22c55e;
     color:#ffffff;
@@ -1034,6 +1034,8 @@ li{
   .section-desc{
     font-size:11px !important;
     font-weight:500;
+    text-align: left;
+    line-height: 1.6;
   
   }
 
@@ -1253,7 +1255,7 @@ font-size: 13px;
 
       font-size:18px;
 
-      right:15px;
+      right:18px;
   }
 
   .help-btn{

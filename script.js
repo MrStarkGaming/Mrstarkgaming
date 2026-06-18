@@ -261,6 +261,13 @@ if (heroBg) {
     "https://xboxwire.thesourcemediaassets.com/sites/2/2026/01/FH6_Evergreen_KeyArt_Branded-Horizontal_3840x2160-7591242f9c6791be6d45.jpg",
 
     "https://xboxwire.thesourcemediaassets.com/sites/2/2025/06/Resident-Evil-Requiem-Grace-Key-Art-8dbdf81f6b8d5d66b5f0.jpg",
+    
+    "https://cdn.wccftech.com/wp-content/uploads/2025/12/demo_image-HD-scaled.jpeg",
+
+
+
+
+    
   ];
 
   let current = 0;
@@ -271,13 +278,13 @@ if (heroBg) {
     heroBg.style.opacity = 0.05;
 
     setTimeout(() => {
-      current = (current + 1) % images.length;
+      current = (current + 2) % images.length;
 
       heroBg.style.backgroundImage = `url(${images[current]})`;
 
-      heroBg.style.opacity = 0.25;
-    }, 700);
+      heroBg.style.opacity = 0.8;
+    }, 800);
   }
 
-  setInterval(changeHeroBg, 7000);
+  setInterval(changeHeroBg, 6000);
 }
