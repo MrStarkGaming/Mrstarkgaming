@@ -271,8 +271,8 @@ body {
 
   padding: 0 20px;
 
-  background: rgba(30, 40, 63, 0.733);
-  backdrop-filter: blur(10px);
+  background: rgba(55, 63, 82, 0.596);
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(18px);
 
   border: 1px solid rgba(0, 191, 255, 0.15);
