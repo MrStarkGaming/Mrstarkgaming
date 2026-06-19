@@ -486,6 +486,27 @@ const tips = [
   
   }, 7000);
   
+
+  window.addEventListener("load", () => {
+
+    const btn = document.getElementById("jarvisBtn");
+    const chat = document.getElementById("jarvis-chat");
+    const closeBtn = document.getElementById("jarvis-close");
+    
+    if (btn && chat) {
+    btn.onclick = () => {
+    chat.style.display = "flex";
+    };
+    }
+    
+    if (closeBtn && chat) {
+    closeBtn.onclick = () => {
+    chat.style.display = "none";
+    };
+    }
+    
+    });
+    
   
 
   
