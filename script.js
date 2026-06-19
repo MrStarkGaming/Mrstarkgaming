@@ -288,3 +288,201 @@ if (heroBg) {
 
   setInterval(changeHeroBg, 6000);
 }
+
+
+
+// =========================
+// JARVIS AI
+// =========================
+
+const jarvisToggle =
+document.getElementById("jarvisBtn");
+
+const jarvisChat =
+document.getElementById("jarvis-chat");
+
+const jarvisClose =
+document.getElementById("jarvis-close");
+
+const jarvisSend =
+document.getElementById("jarvis-send");
+
+const jarvisInput =
+document.getElementById("jarvis-input");
+
+const jarvisMessages =
+document.getElementById("jarvis-messages");
+
+// =========================
+// OPEN CHAT
+// =========================
+
+if (jarvisToggle) {
+
+jarvisToggle.addEventListener("click", () => {
+
+```
+jarvisChat.style.display = "flex";
+```
+
+});
+
+}
+
+// =========================
+// CLOSE CHAT
+// =========================
+
+if (jarvisClose) {
+
+jarvisClose.addEventListener("click", () => {
+
+```
+jarvisChat.style.display = "none";
+```
+
+});
+
+}
+
+// =========================
+// SEND MESSAGE
+// =========================
+
+async function sendJarvisMessage() {
+
+const message =
+jarvisInput.value.trim();
+
+if (!message) return;
+
+jarvisMessages.innerHTML += `     <div class="jarvis-user">
+      ${message}     </div>
+  `;
+
+jarvisInput.value = "";
+
+jarvisMessages.innerHTML += `     <div class="jarvis-bot" id="typing">
+      JARVIS is thinking...     </div>
+  `;
+
+jarvisMessages.scrollTop =
+jarvisMessages.scrollHeight;
+
+try {
+
+const res = await fetch(
+  `https://jarvis.sagarverma95604-a99.workers.dev/?q=${encodeURIComponent(message)}`
+);
+
+const data =
+await res.json();
+
+const typing =
+document.getElementById("typing");
+
+if (typing) typing.remove();
+
+jarvisMessages.innerHTML += `
+  <div class="jarvis-bot">
+    ${data.answer || "No response received."}
+  </div>
+`;
+
+
+} catch (error) {
+
+
+const typing =
+document.getElementById("typing");
+
+if (typing) typing.remove();
+
+jarvisMessages.innerHTML += `
+  <div class="jarvis-bot">
+    Server is currently unavailable.
+  </div>
+`;
+
+console.error(error);
+
+
+}
+
+jarvisMessages.scrollTop =
+jarvisMessages.scrollHeight;
+
+}
+
+// =========================
+// SEND BUTTON
+// =========================
+
+if (jarvisSend) {
+
+jarvisSend.addEventListener(
+"click",
+sendJarvisMessage
+);
+
+}
+
+// =========================
+// ENTER KEY
+// =========================
+
+if (jarvisInput) {
+
+jarvisInput.addEventListener(
+"keypress",
+(e) => {
+
+  if (e.key === "Enter") {
+
+    sendJarvisMessage();
+
+  }
+
+}
+
+
+);
+
+}
+
+// =========================
+// TOOLTIP ROTATOR
+// =========================
+
+const tips = [
+"Ask JARVIS",
+"Fix Game Errors",
+"Need Help?",
+"Linkvertise Help",
+"Missing DLL?",
+"Installation Fix",
+"PC Game Support",
+"Android Game Help"
+];
+
+let tipIndex = 0;
+
+setInterval(() => {
+
+const jarvis =
+document.getElementById("jarvisBtn");
+
+if (!jarvis) return;
+
+jarvis.setAttribute(
+"data-tooltip",
+tips[tipIndex]
+);
+
+tipIndex =
+(tipIndex + 1) %
+tips.length;
+
+}, 5000);
+
+  

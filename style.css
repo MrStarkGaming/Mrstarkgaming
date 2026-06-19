@@ -1,3 +1,21 @@
+/* =====================================================
+   MR STARK GAMING - ORGANIZED CSS VERSION
+   Sections:
+   1. BODY & GLOBAL
+   2. HERO
+   3. BUTTONS
+   4. SOCIAL
+   5. NAVBAR
+   6. SEARCH BAR
+   7. GAME GRID
+   8. CATEGORY BOXES
+   9. SLIDER ARROWS
+   10. FOOTER
+   11. FLOATING BUTTONS
+   12. JARVIS AI
+   13. MOBILE RESPONSIVE
+===================================================== */
+
 html,
 body {
   margin: 0;
@@ -990,7 +1008,7 @@ li{
 }
 
 .help-btn{
-  bottom:30px;
+  bottom:100px;
   background: #ff3b30;
     color:#ffffff;
 
@@ -998,7 +1016,7 @@ li{
 }
 
 .top-btn{
-  bottom:100px;
+  bottom:30px;
   
   background:#22c55e;
     color:#ffffff;
@@ -1011,271 +1029,436 @@ li{
 }
 
 
-
-@media (max-width: 768px) {
-    .slider-hint{
-        display:none;
-    
-}
-  /* Navbar */
-  .navbar{
-    padding:0 15px;
+#jarvisBtn{
+  position:fixed;
+  
+  right:25px;
+  bottom:170px;
+  
+  width:58px;
+  height:58px;
+  
+  border:none;
+  border-radius:50%;
+  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  
+  cursor:pointer;
+  
+  color:#fff;
+  
+  background:linear-gradient(
+  135deg,
+  #00bfff,
+  #008cff
+  );
+  
+  box-shadow:
+  0 0 15px rgba(0,191,255,.7),
+  0 0 30px rgba(0,191,255,.4);
+  
+  z-index:99999;
+  
+  transition:.3s ease;
   }
-  .section-desc{
-    font-size:11px !important;
-    font-weight:500;
-    text-align: left;
-    line-height: 1.6;
+  
+  #jarvisBtn:hover{
+  transform:translateY(-4px);
+  
+  box-shadow:
+  0 0 20px rgba(0,191,255,.9),
+  0 0 40px rgba(0,191,255,.6);
+  }
+  
+  #jarvisBtn i{
+  font-size:24px;
+  line-height:1;
+  }
+  
+
+
+  
+  
+/* =========================
+   Android
+========================= */
+
+
+@media (max-width:768px){
+
+  /* =========================
+  SLIDER ARROWS
+  ========================= */
+  
+  .slider-hint{
+  display:none;
+  }
+  
+  /* =========================
+  NAVBAR
+  ========================= */
+  
+  .navbar{
+  padding:0 15px;
+  }
+  
+  .glass-nav{
+  position:fixed;
+  top:10px;
+  left:50%;
+  transform:translateX(-50%);
+  
+ 
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  
+  height:60px !important;
+  padding:0 15px !important;
+  
+  overflow:visible;
+
   
   }
-
-  .menu-btn{
-    display:block !important;
-    position:absolute;
-    right:15px;
-    top:45%;
-    transform:translateY(-50%);
-  }
-  .glass-nav {
-    position:fixed;
-    top:10px;
-    left:50%;
-    transform:translateX(-50%);
-
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-
-    height: 60px !important;
-    padding: 0 15px !important;
-  }
-  .glass-nav{
-    overflow:visible;
-  }
-  /* Logo */
-  .logo img {
-    height: 35px;
-    max-width: 150px;
-  }
-
-
- 
-/* Search show */
-
-.nav-search input{
-  font-size:12px;
-  padding:0 10px;
-}
-.logo{
+  
+  /* =========================
+  LOGO
+  ========================= */
+  
+  .logo{
   flex-shrink:0;
   margin-right:auto;
   margin-left:0;
-}
-
-.nav-search input{
-  background: transparent !important;
-  background-color: transparent !important;
-
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-
-  color: #fff !important;
-  caret-color: #00bfff;
-
-  font-size: 12px;
-  padding: 0 10px !important;
-
-  flex: 1;
-
-  -webkit-appearance: none !important;
-  appearance: none !important;
-}
-.nav-search button{
+  }
+  
+  .logo img{
+  height:30px;
+  max-width:150px;
+  margin-right:auto;
+  margin-top:15px;
+  }
+  
+  /* =========================
+  SEARCH BAR
+  ========================= */
+  
+  .nav-search{
+  flex-shrink:0;
+  
+  
+  position:absolute;
+  top:50%;
+  right:55px;
+  
+  transform:translateY(-50%);
+  
+  width:160px;
+  height:36px;
+  
+  z-index:1000;
+ 
+  
+  }
+  
+  .nav-search input{
+  background:transparent !important;
+  background-color:transparent !important;
+  
+ 
+  border:none !important;
+  outline:none !important;
+  box-shadow:none !important;
+  
+  color:#fff !important;
+  caret-color:#00bfff;
+  
+  font-size:12px;
+  padding:0 10px !important;
+  
+  flex:1;
+  
+  -webkit-appearance:none !important;
+  appearance:none !important;
+  
+  
+  }
+  
+  .nav-search button{
   display:flex !important;
   align-items:center;
   justify-content:center;
-}
-.nav-search button i{
+  }
+  
+  .nav-search button i{
   color:#00bfff !important;
   font-size:18px !important;
-}
-
-  /* Hamburger */
-  
-  .nav-search{
-    flex-shrink:0;
-    position:absolute;
-  
-    top:50%;
-    transform:translateY(-50%);
-    right:55px;
-    width:160px;
-    height:36px;
-  
-    z-index:1000;
   }
+  
+  /* =========================
+  HAMBURGER MENU
+  ========================= */
   
   .menu-btn{
-    z-index:10001;
+  display:block !important;
+  
+  
+  position:absolute;
+  right:15px;
+  top:45%;
+  
+  transform:translateY(-50%);
+  
+  z-index:10001;
+  
+  
   }
-
-  /* Menu hidden by default */
-  .nav-links {
-    gap: 45px;
-    display: none !important;
-
-    position: absolute;
-    top: 65px;
-    left: 50%;
-    transform: translateX(-50%);
-
-    width: 90%;
-
-    background: #0f172a;
-    border-radius: 12px;
-
-    padding: 20px 0;
-
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
-  }
-
-  /* Show only when active */
-  .nav-links.active {
-    display: flex !important;
-  }
-
-  /* Games Grid */
-  .games-grid{
-    padding:0 10px 15px;
- }
+  
+  /* =========================
+  MOBILE MENU
+  ========================= */
+  
+  .nav-links{
+  display:none !important;
+  
  
- .game-card{
-  flex:0 0 105px !important;
-}
-.game-overlay h3{
-  font-size:12px !important;
-}
-
-  .game-card img {
-    width: 100%;
-    height: auto;
+  position:absolute;
+  top:65px;
+  left:50%;
+  
+  transform:translateX(-50%);
+  
+  width:90%;
+  
+  background:#0f172a;
+  
+  border-radius:12px;
+  
+  padding:20px 0;
+  
+  flex-direction:column;
+  align-items:center;
+  
+  gap:20px;
+  
+  box-shadow:0 10px 25px rgba(0,0,0,.4);
+ 
+  
   }
-  .logo img {
-    margin-right:auto;
-    height: 30px;
-    margin-top: 15px;
+  
+  .nav-links.active{
+  display:flex !important;
   }
+  
+  /* =========================
+  HERO SECTION
+  ========================= */
+  
+  .hero-logo{
+  width:220px !important;
+  max-width:80%;
+  height:auto;
+  }
+  
+  .stark-hero{
+  min-height:10vh;
+  }
+  
+  .stark-hero p{
+  font-size:16px !important;
+  line-height:1.4;
+  padding:0 15px;
+  }
+  
+  .section-desc{
+  font-size:11px !important;
+  font-weight:500;
+  text-align:left;
+  line-height:1.6;
+  }
+  
+  /* =========================
+  HERO BUTTONS
+  ========================= */
+  
+  .btns{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  }
+  
+  .btn-primary,
+  .btn-secondary,
+  .btn-support{
+  display:inline-flex;
+  
 
-.btns {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+  justify-content:center;
+  align-items:center;
+  
+  width:auto;
+  min-width:unset;
+  
+  padding:10px 16px;
+  
+  font-size:13px;
+  
+  margin:10px;
+  
+  border-radius:8px;
 
-.btn-primary,
-.btn-secondary,
-.btn-support {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 10px 16px;
-font-size: 13px;
-  min-width: unset;
-  width: auto;
-
-  margin: 10px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: all 0.3s ease;
-}
-.hero-logo{
-  width: 220px !important;
-  max-width: 80%;
-  height: auto;
-}
-.stark-hero{
-  min-height: 10vh;
-}
-
-.stark-hero p{
-  font-size: 16px !important;
-  line-height: 1.4;
-  padding: 0 15px;
-}
-/* Mobile Heading Fix */
-.game-category{
+  
+  }
+  
+  /* =========================
+  CATEGORY HEADINGS
+  ========================= */
+  
+  .game-category{
   font-size:18px !important;
+  
+ 
   margin-bottom:12px !important;
-  text-decoration: none;
-    color: white; 
-
-}
-
-.category-box{
+  
+  color:#fff;
+  text-align:center;
+  
+  
+  }
+  
+  .category-box,
+  .category-box-2,
+  .category-box-6{
+  width:95% !important;
+  
+ 
+  margin:0 auto 18px auto !important;
+  
   padding:10px !important;
   
+  text-align:center;
+
   
-}
-
-.category-box-text h2,
-.category-box-text h1{
-  font-size:25px !important;
-  line-height:1.1;
-  margin:10px 0 20px;
-}
-.category-box-textb h2,
-.category-box-textb h1{
-  font-size:25px !important;
-  line-height:1.1;
-  margin:10px 0 20px;
-}
-/* go to top btn */
-  .floating-btn{
-      width:48px;
-      height:48px;
-
-      font-size:18px;
-
-      right:18px;
   }
+  
+  .category-box-text h1,
+  .category-box-text h2,
+  .category-box-textb h1,
+  .category-box-textb h2{
+  font-size:25px !important;
+  
+  
+  line-height:1.1;
+  
+  margin:10px auto 20px;
+  
+  text-align:center;
+  
+  
+  }
+  
+  /* =========================
+  GAME CARDS
+  ========================= */
+  
+  .games-grid{
+  padding:0 10px 15px;
+  }
+  
+  .game-card{
+  flex:0 0 105px !important;
+  }
+  
+  .game-card img{
+  width:100%;
+  height:auto;
+  }
+  
+  .game-overlay h3{
+  font-size:12px !important;
+  }
+  
+  /* =========================
+  JARVIS CHAT WINDOW
+  ========================= */
+  
+  #jarvis-chat{
+  width:92% !important;
+  height:70vh !important;
+  
+ 
+  right:4% !important;
+  bottom:80px !important;
+ 
+  
+  }
+  
+  /* =========================
+  FLOATING BUTTONS
+  ========================= */
+  
+  .floating-btn,
+  #jarvisBtn{
+  width:48px;
+  height:48px;
+  
 
+  right:18px;
+  
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  
+  }
+  
   .help-btn{
-      bottom:70px;
+ 
+  bottom:130px;
   }
-
+  
   .top-btn{
-      bottom:130px;
+    bottom:70px;
   }
-
+  
+  #jarvisBtn{
+  bottom:190px;
+  }
+  
   .top-btn i,
-  .help-btn i{
-      font-size:22px;
+  .help-btn i,
+  #jarvisBtn i{
+  font-size:22px;
   }
-/******************Footer*********/
+  
+  /* =========================
+  FOOTER
+  ========================= */
+  
   .footer{
-    padding: 20px 15px;
-    font-size: 13px;
-    margin-top: 20px;
-  }
+  padding:20px 15px;
+  
 
+  font-size:13px;
+  
+  margin-top:20px;
+
+  
+  }
+  
   .footer-links{
-    gap: 12px;
-    margin-bottom: 15px;
+  gap:12px;
+  margin-bottom:15px;
   }
-
+  
   .footer-links a{
-    font-size: 14px;
+  font-size:14px;
   }
-
-}
+  
+  }
+  
 
 
