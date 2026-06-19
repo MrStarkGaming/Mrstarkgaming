@@ -584,35 +584,25 @@ li{
   gap:15px;
   padding:15px;
   scrollbar-width:none;
--ms-overflow-style:none;
+  -ms-overflow-style:none;
 }
 
-.game-card{
-  flex:0 0 140px;
-}
 .games-grid::-webkit-scrollbar{
   display:none;
 }
 
 .game-card{
-  .game-card{
-  flex:0 0 260px;
-  padding-bottom:25px;
-}
-}
-
-.game-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-  border: 1px solid rgba(0, 191, 255, 0.25);
-  background: #111827;
-  transition: 0.35s ease;
-  cursor: pointer;
-  text-decoration: none;
-  color: #fff;
-
-  min-width: 0; /* ye sabse important hai */
+  flex:0 0 140px;
+  position:relative;
+  overflow:hidden;
+  border-radius:12px;
+  border:1px solid rgba(0,191,255,.25);
+  background:#111827;
+  transition:.35s ease;
+  cursor:pointer;
+  text-decoration:none;
+  color:#fff;
+  min-width:0;
 }
 
 .game-card img {

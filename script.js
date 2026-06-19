@@ -166,7 +166,7 @@ document.querySelectorAll(".games-grid").forEach((grid) => {
   let touchTimeout;
 
   function loopSlider() {
-    const halfWidth = slider.scrollWidth / 2 - 5;
+    const halfWidth = slider.scrollWidth / 2;
 
     if (!paused) {
       slider.scrollLeft += autoSpeed;
