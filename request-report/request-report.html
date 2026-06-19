@@ -46,7 +46,7 @@
 
         <label>Your Email *</label>
         <input type="email" id="email" placeholder="your@email.com" required>
-
+    
         <label>Request Type *</label>
         <select id="requestType" required>
             <option value="">Select Type</option>
@@ -56,20 +56,27 @@
             <option>Game Update Request</option>
             <option>Other Issue</option>
         </select>
-
+    
+        <label>Select Your Device *</label>
+        <select id="device" required>
+            <option value="">Select Device</option>
+            <option>Computer</option>
+            <option>Android</option>
+        </select>
+    
         <label>Game Name *</label>
         <input type="text" id="gameName" placeholder="Enter Game Name" required>
-
+    
         <label>Description *</label>
         <textarea id="description" rows="6" placeholder="Explain your request or issue..." required></textarea>
-
+    
         <label>Screenshot Link (Optional)</label>
-<input type="text" id="screenshot" placeholder="Paste Google Drive or Imgur Link">
-
+        <input type="text" id="screenshot" placeholder="Paste Google Drive or Imgur Link">
+    
         <button type="submit">
-            🚀 Submit Request
+            Submit Request
         </button>
-
+    
     </form>
 
 </section>
@@ -87,20 +94,23 @@ document.getElementById("gameForm").addEventListener("submit", async function(e)
 
     const data = new FormData();
 
-    data.append("entry.1582356728",
-        document.getElementById("email").value);
+data.append("entry.1582356728",
+    document.getElementById("email").value);
 
-    data.append("entry.536872370",
-        document.getElementById("requestType").value);
+data.append("entry.536872370",
+    document.getElementById("requestType").value);
 
-    data.append("entry.104060538",
-        document.getElementById("gameName").value);
+data.append("entry.1725591322",
+    document.getElementById("device").value);
 
-    data.append("entry.1677447922",
-        document.getElementById("description").value);
+data.append("entry.104060538",
+    document.getElementById("gameName").value);
 
-    data.append("entry.1421051940",
-        document.getElementById("screenshot").value);
+data.append("entry.1677447922",
+    document.getElementById("description").value);
+
+data.append("entry.1421051940",
+    document.getElementById("screenshot").value);
 
     try {
 
