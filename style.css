@@ -271,9 +271,9 @@ body {
 
   padding: 0 20px;
 
-  background: rgba(30, 40, 63, 0.733);
+  background: rgba(30, 40, 63, 0.473);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(12px);
 
   border: 1px solid rgba(0, 191, 255, 0.15);
   border-radius: 18px;
@@ -474,7 +474,7 @@ li{
   width:210px;
   height:36px;
 
-  background:rgba(255,255,255,.05);
+  background:rgba(248, 0, 0, 0.05);
   border:1px solid rgba(0,191,255,.35);
   border-radius:30px;
 
@@ -483,7 +483,7 @@ li{
 
   box-shadow:0 0 10px rgba(0,191,255,.15);
 
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(62, 102, 155, 0);
   border: 1px solid rgba(0, 191, 255, 0.35);
   border-radius: 30px;
 
@@ -491,7 +491,7 @@ li{
   backdrop-filter: blur(10px);
 
   box-shadow: 0 0 10px rgba(0, 191, 255, 0.15),
-    inset 0 0 10px rgba(0, 191, 255, 0.08);
+    inset 0 0 10px rgba(0, 191, 255, 0.219);
 
   transition: 0.3s ease;
 }
