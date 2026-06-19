@@ -160,7 +160,7 @@ document.querySelectorAll(".games-grid").forEach((grid) => {
 
   if (!slider) return;
 
-  let autoSpeed = 1;
+  let autoSpeed = 0.5;
   let manualSpeed = 0;
   let paused = false;
   let touchTimeout;
@@ -203,9 +203,9 @@ document.querySelectorAll(".games-grid").forEach((grid) => {
     const x = e.clientX - rect.left;
 
     if (x < 120) {
-      manualSpeed = -3;
+      manualSpeed = -2;
     } else if (x > rect.width - 120) {
-      manualSpeed = 3;
+      manualSpeed = 2;
     } else {
       manualSpeed = 0;
     }
