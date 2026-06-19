@@ -455,34 +455,37 @@ jarvisInput.addEventListener(
 // =========================
 
 const tips = [
-"Ask JARVIS",
-"Fix Game Errors",
-"Need Help?",
-"Linkvertise Help",
-"Missing DLL?",
-"Installation Fix",
-"PC Game Support",
-"Android Game Help"
-];
-
-let tipIndex = 0;
-
-setInterval(() => {
-
-const jarvis =
-document.getElementById("jarvisBtn");
-
-if (!jarvis) return;
-
-jarvis.setAttribute(
-"data-tooltip",
-tips[tipIndex]
-);
-
-tipIndex =
-(tipIndex + 1) %
-tips.length;
-
-}, 5000);
+  "Need Help?",
+  "Fix DLL Errors",
+  "Linkvertise Help",
+  "Game Installation",
+  "Ask JARVIS"
+  ];
+  
+  let tip = 0;
+  
+  setInterval(() => {
+  
+  const btn =
+  document.getElementById("jarvisBtn");
+  
+  if(!btn) return;
+  
+  btn.setAttribute(
+  "data-tooltip",
+  tips[tip]
+  );
+  
+  btn.classList.add("show-tip");
+  
+  setTimeout(() => {
+  btn.classList.remove("show-tip");
+  }, 3000);
+  
+  tip = (tip + 1) % tips.length;
+  
+  }, 7000);
+  
+  
 
   
