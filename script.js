@@ -166,24 +166,20 @@ document.querySelectorAll(".games-grid").forEach((grid) => {
   let touchTimeout;
 
   function loopSlider() {
-    const halfWidth = slider.scrollWidth / 2;
-
+    const halfWidth = Math.floor(slider.scrollWidth / 2);
+  
     if (!paused) {
       slider.scrollLeft += autoSpeed;
     }
-
+  
     if (manualSpeed !== 0) {
       slider.scrollLeft += manualSpeed;
     }
-
-    if (slider.scrollLeft >= halfWidth) {
-      slider.scrollLeft -= halfWidth;
+  
+    if (slider.scrollLeft >= halfWidth - 2) {
+      slider.scrollLeft = 1;
     }
-
-    if (slider.scrollLeft <= 0) {
-      slider.scrollLeft += halfWidth;
-    }
-
+  
     requestAnimationFrame(loopSlider);
   }
 
