@@ -319,15 +319,15 @@ document.getElementById("jarvis-messages");
 // =========================
 
 if (jarvisToggle) {
+  jarvisToggle.addEventListener("click", () => {
+    jarvisChat.style.display = "flex";
+  });
+}
 
-jarvisToggle.addEventListener("click", () => {
-
-```
-jarvisChat.style.display = "flex";
-```
-
-});
-
+if (jarvisClose) {
+  jarvisClose.addEventListener("click", () => {
+    jarvisChat.style.display = "none";
+  });
 }
 
 // =========================
@@ -338,9 +338,9 @@ if (jarvisClose) {
 
 jarvisClose.addEventListener("click", () => {
 
-```
+
 jarvisChat.style.display = "none";
-```
+
 
 });
 
@@ -430,14 +430,37 @@ jarvisMessages.scrollHeight;
 // SEND BUTTON
 // =========================
 
-if (jarvisSend) {
+window.addEventListener("load", () => {
 
-jarvisSend.addEventListener(
-"click",
-sendJarvisMessage
-);
+  const sendBtn =
+  document.getElementById("jarvis-send");
 
-}
+  const input =
+  document.getElementById("jarvis-input");
+
+  if (sendBtn) {
+
+    sendBtn.onclick = () => {
+      sendJarvisMessage();
+    };
+
+  }
+
+  if (input) {
+
+    input.addEventListener("keydown", (e) => {
+
+      if (e.key === "Enter") {
+        sendJarvisMessage();
+      }
+
+    });
+
+  }
+
+});
+
+
 
 // =========================
 // ENTER KEY
