@@ -1015,6 +1015,14 @@ li{
     box-shadow: 0 0 12px rgba(255, 59, 48, 0.6), 0 0 24px rgba(255, 59, 48, 0.4);
 }
 
+.help-btn:hover{
+transform:translateY(-4px); 
+box-shadow:
+0 0 20px rgba(255, 0, 0, 0.9),
+0 0 40px rgba(255, 0, 0, 0.6);
+}
+
+
 .top-btn{
   bottom:30px;
   
@@ -1022,11 +1030,20 @@ li{
     color:#ffffff;
 
     box-shadow: 0 0 12px rgba(34, 197, 94, 0.6), 0 0 24px rgba(0, 255, 55, 0.4);
+    
 }
 
 .top-btn i{
   font-size:24px;
+   
 }
+
+.top-btn:hover{
+  transform:translateY(-4px); 
+  box-shadow:
+  0 0 20px rgba(9, 255, 0, 0.9),
+  0 0 40px rgba(0, 255, 85, 0.6);
+  }
 
 
 #jarvisBtn{
