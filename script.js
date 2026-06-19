@@ -295,6 +295,7 @@ if (heroBg) {
 // JARVIS AI
 // =========================
 
+
 const jarvisToggle =
 document.getElementById("jarvisBtn");
 
@@ -351,8 +352,16 @@ jarvisChat.style.display = "none";
 
 async function sendJarvisMessage() {
 
-const message =
-jarvisInput.value.trim();
+  const input =
+  document.getElementById("jarvis-input");
+  
+  if (!input) {
+    alert("jarvis-input not found");
+    return;
+  }
+  
+  const message =
+  input.value.trim();
 
 if (!message) return;
 
