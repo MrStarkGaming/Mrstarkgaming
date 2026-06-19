@@ -491,9 +491,9 @@ jarvisInput.addEventListener(
 
 const tips = [
   "Need Help?",
-  "Fix DLL Errors",
-  "Linkvertise Help",
-  "Game Installation",
+  "Fix DLL Errors?",
+  "Linkvertise Help?",
+  "Game Installation?",
   "Ask JARVIS"
   ];
   
