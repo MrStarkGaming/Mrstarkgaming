@@ -352,18 +352,21 @@ jarvisChat.style.display = "none";
 
 async function sendJarvisMessage() {
 
-  const input =
+  const jarvisInput =
   document.getElementById("jarvis-input");
   
-  if (!input) {
-    alert("jarvis-input not found");
-    return;
+  const jarvisMessages =
+  document.getElementById("jarvis-messages");
+  
+  if (!jarvisInput || !jarvisMessages) {
+  console.log("Jarvis elements not found");
+  return;
   }
   
   const message =
-  input.value.trim();
-
-if (!message) return;
+  jarvisInput.value.trim();
+  
+  if (!message) return;
 
 jarvisMessages.innerHTML += `     <div class="jarvis-user">
       ${message}     </div>
