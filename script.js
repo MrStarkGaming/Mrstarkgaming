@@ -1,7 +1,89 @@
 // =========================
 // SEARCH FUNCTION
 // =========================
+const searchKeywords = {
 
+  // GTA
+  "gta v": ["gta5", "gtav", "grand theft auto 5", "grand theft auto v", "michael", "franklin", "trevor"],
+  "grand theft auto iv": ["gta4", "gta iv", "nico", "nico bellic"],
+  "grand theft auto san andreas": ["gta sa", "san andreas", "cj", "carl johnson"],
+  "grand theft auto vice city": ["gta vc", "vice city", "tommy", "tommy vercetti"],
+  "grand theft auto iii": ["gta 3", "gta iii", "claude"],
+
+  // NFS
+  "need for speed most wanted": ["nfs mw", "nfs", "most wanted", "most wanted 2005", "mw05", "razor"],
+  "need for speed carbon": ["nfs carbon", "carbon", "darius"],
+  "need for speed underground": ["nfs underground", "underground"],
+  "need for speed underground 2": ["nfs underground 2", "u2", "underground 2"],
+  "need for speed the run": ["nfs run", "the run"],
+  "need for speed rivals": ["nfs rivals"],
+  "need for speed payback": ["nfs payback"],
+  "need for speed heat": ["nfs heat"],
+  "need for speed unbound": ["nfs unbound"],
+
+  // COD
+  "call of duty black ops ii": ["bo2", "black ops 2", "cod bo2"],
+  "call of duty black ops iii": ["bo3", "black ops 3"],
+  "call of duty ghosts": ["cod ghosts", "ghosts"],
+  "call of duty modern warfare 3": ["mw3", "modern warfare 3"],
+  "call of duty modern warfare ii": ["mw2", "modern warfare 2"],
+  "call of duty world at war": ["waw", "world at war"],
+
+  // CS
+  "counter strike source": ["css", "counter strike source"],
+  "counter strike 1.6": ["cs", "cs16", "counter strike", "cs 1.6"],
+
+  // Battlefield
+  "battlefield 4": ["bf4", "battlefield 4"],
+  "battlefield v": ["bf5", "battlefield 5"],
+  "battlefield bad company 2": ["bad company 2", "bc2"],
+
+  // Open World
+  "red dead redemption 2": ["rdr2", "red dead 2", "arthur", "arthur morgan"],
+  "cyberpunk 2077": ["cyberpunk", "cp2077", "v"],
+  "watch dogs": ["wd1", "watchdogs"],
+  "watch dogs 2": ["wd2"],
+  "watch dogs legion": ["wd legion"],
+  "sleeping dogs": ["wei shen"],
+  "just cause 3": ["jc3"],
+  "just cause 4": ["jc4"],
+  "mafia ii": ["mafia 2", "vito"],
+  "mafia iii": ["mafia 3", "lincoln clay"],
+
+  // Action Adventure
+  "god of war": ["gow", "kratos"],
+  "god of war ragnarok": ["gow ragnarok", "ragnarok"],
+  "ghost of tsushima": ["got", "jin sakai"],
+  "batman arkham knight": ["arkham knight", "batman"],
+  "batman arkham city": ["arkham city"],
+  "marvel’s spider-man remastered": ["spiderman", "spider man", "peter parker"],
+  "marvel’s spider-man miles morales": ["miles morales"],
+
+  // Horror
+  "resident evil village": ["re village", "re8", "ethan winters"],
+  "silent hill f": ["silent hill"],
+  "the evil within 2": ["evil within"],
+  "pacify": ["ghost game"],
+  "devour": ["coop horror"],
+  "choo-choo charles": ["choo choo charles"],
+  "five nights at freddy’s 4": ["fnaf", "fnaf 4"],
+  "friday the 13th: the game": ["jason"],
+
+  // Racing
+  "forza horizon 6": ["fh6", "forza"],
+  "grid autosport": ["grid"],
+  "wreckfest": ["car crash game"],
+
+  // Others
+  "elden ring": ["elden"],
+  "hogwarts legacy": ["harry potter"],
+  "black myth: wukong": ["wukong"],
+  "tekken 8": ["tekken"],
+  "phasmophobia": ["phasmo"],
+  "escape from tarkov": ["tarkov"],
+  "ready or not": ["swat game"],
+  "sniper elite 4": ["sniper elite"]
+};
 const searchBox = document.getElementById("searchBox");
 const resultsBox = document.getElementById("search-results");
 
@@ -30,11 +112,26 @@ searchBox.addEventListener("keyup", function () {
     const cleanText = text.replace(/\s/g, "");
     const cleanValue = value.replace(/\s/g, "");
 
-    const matched =
-      text.includes(value) ||
-      value.includes(text) ||
-      cleanText.includes(cleanValue) ||
-      text.split(" ").some((word) => word.startsWith(cleanValue));
+    let matched =
+  text.includes(value) ||
+  value.includes(text) ||
+  cleanText.includes(cleanValue) ||
+  text.split(" ").some((word) => word.startsWith(cleanValue));
+
+  for (const game in searchKeywords) {
+    if (
+      (
+        text.includes(game) ||
+        text.includes(game.replace(/:/g, ""))
+      ) &&
+      searchKeywords[game].some(keyword =>
+        keyword.toLowerCase().includes(value)
+      )
+    ) {
+      matched = true;
+    }
+  }
+
 
     if (matched) {
       resultsBox.appendChild(card.cloneNode(true));
@@ -64,7 +161,23 @@ searchBox.addEventListener("keyup", function () {
 
     seen.add(text);
 
-    card.style.display = text.includes(value) ? "" : "none";
+    let matched = text.includes(value);
+
+    for (const game in searchKeywords) {
+      if (
+        (
+          text.includes(game) ||
+          text.includes(game.replace(/:/g, ""))
+        ) &&
+        searchKeywords[game].some(keyword =>
+          keyword.toLowerCase().includes(value)
+        )
+      ) {
+        matched = true;
+      }
+    }
+
+card.style.display = matched ? "" : "none";
   });
 });
 
