@@ -562,11 +562,11 @@ const tips = [
     
       setTimeout(() => {
         btn.classList.remove("show-tip");
-      }, 3000);
+      }, 3500);
     
       tip = (tip + 1) % tips.length;
     
-    }, 7000);
+    }, 7500);
   
     });
   
