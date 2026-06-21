@@ -540,7 +540,36 @@ const tips = [
     };
     }
     
+    const tips = [
+      "Need New Game?",
+      "Link is Broken?",
+      "Game Request?",
+      "Report an Issue?",
+      "Need Help?"
+    ];
+    
+    let tip = 0;
+    
+    setInterval(() => {
+    
+      const btn = document.querySelector(".help-btn");
+    
+      if (!btn) return;
+    
+      btn.setAttribute("data-tooltip", tips[tip]);
+    
+      btn.classList.add("show-tip");
+    
+      setTimeout(() => {
+        btn.classList.remove("show-tip");
+      }, 3000);
+    
+      tip = (tip + 1) % tips.length;
+    
+    }, 7000);
+  
     });
+  
     
   
 

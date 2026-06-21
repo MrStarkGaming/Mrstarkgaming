@@ -1021,7 +1021,10 @@ box-shadow:
 0 0 20px rgba(255, 0, 0, 0.9),
 0 0 40px rgba(255, 0, 0, 0.6);
 }
-
+.help-btn.show-tip::after{
+  opacity:1 !important;
+  visibility:visible !important;
+}
 
 .top-btn{
   bottom:30px;
@@ -1246,7 +1249,12 @@ JARVIS AI CHAT
     visibility:visible !important;
   }
 
-
+.jarvis-icon{
+  width:34px;
+  height:34px;
+  object-fit:contain;
+  border-radius:50%;
+}
   
   
 /* =========================
