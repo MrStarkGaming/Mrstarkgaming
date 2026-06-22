@@ -433,15 +433,16 @@ document.getElementById("jarvis-messages");
 
 if (jarvisToggle) {
   jarvisToggle.addEventListener("click", () => {
-    jarvisChat.style.display = "flex";
+
+    if (jarvisChat.style.display === "flex") {
+      jarvisChat.style.display = "none";
+    } else {
+      jarvisChat.style.display = "flex";
+    }
+
   });
 }
 
-if (jarvisClose) {
-  jarvisClose.addEventListener("click", () => {
-    jarvisChat.style.display = "none";
-  });
-}
 
 // =========================
 // CLOSE CHAT
@@ -642,9 +643,15 @@ const tips = [
     const closeBtn = document.getElementById("jarvis-close");
     
     if (btn && chat) {
-    btn.onclick = () => {
-    chat.style.display = "flex";
-    };
+      btn.onclick = () => {
+    
+        if (chat.style.display === "flex") {
+          chat.style.display = "none";
+        } else {
+          chat.style.display = "flex";
+        }
+    
+      };
     }
     
     if (closeBtn && chat) {
@@ -684,6 +691,49 @@ const tips = [
     });
   
     
-  
+   // =========================
+// DRAG JARVIS WINDOW
+// =========================
 
-  
+window.addEventListener("load", () => {
+
+  const chat = document.getElementById("jarvis-chat");
+  const header = document.querySelector(".jarvis-header");
+
+  let dragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  header.addEventListener("mousedown", (e) => {
+
+    dragging = true;
+
+    const rect = chat.getBoundingClientRect();
+
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
+
+    chat.style.left = rect.left + "px";
+    chat.style.top = rect.top + "px";
+    chat.style.right = "auto";
+    chat.style.bottom = "auto";
+
+  });
+
+  document.addEventListener("mousemove", (e) => {
+
+    if (!dragging) return;
+
+    chat.style.left =
+      (e.clientX - offsetX) + "px";
+
+    chat.style.top =
+      (e.clientY - offsetY) + "px";
+
+  });
+
+  document.addEventListener("mouseup", () => {
+    dragging = false;
+  });
+
+});

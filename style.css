@@ -1096,6 +1096,21 @@ box-shadow:
   font-size:24px;
   line-height:1;
   }
+  #jarvis-chat{
+    position:fixed;
+  
+    right:25px;
+    bottom:240px;
+  
+    width:340px;
+    height:480px;
+  
+    resize:both;
+    min-width:300px;
+    min-height:350px;
+  
+    overflow:auto;
+  }
 
   /* =========================
 JARVIS AI CHAT
@@ -1118,7 +1133,7 @@ JARVIS AI CHAT
   border:1px solid rgba(0,191,255,.3);
   border-radius:18px;
   
-  overflow:hidden;
+  overflow:auto;
   
   z-index:999999;
   
@@ -1127,6 +1142,8 @@ JARVIS AI CHAT
   }
   
   .jarvis-header{
+    cursor:move;
+  user-select:none;
   display:flex;
   justify-content:space-between;
   align-items:center;
@@ -1255,7 +1272,7 @@ JARVIS AI CHAT
   object-fit:contain;
   border-radius:50%;
 }
-  
+
   
 /* =========================
    Android
