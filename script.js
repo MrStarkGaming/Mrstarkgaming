@@ -737,3 +737,34 @@ window.addEventListener("load", () => {
   });
 
 });
+header.addEventListener("touchstart", (e) => {
+
+  dragging = true;
+
+  const rect = chat.getBoundingClientRect();
+
+  offsetX = e.touches[0].clientX - rect.left;
+  offsetY = e.touches[0].clientY - rect.top;
+
+  chat.style.left = rect.left + "px";
+  chat.style.top = rect.top + "px";
+  chat.style.right = "auto";
+  chat.style.bottom = "auto";
+
+});
+
+document.addEventListener("touchmove", (e) => {
+
+  if (!dragging) return;
+
+  chat.style.left =
+    (e.touches[0].clientX - offsetX) + "px";
+
+  chat.style.top =
+    (e.touches[0].clientY - offsetY) + "px";
+
+});
+
+document.addEventListener("touchend", () => {
+  dragging = false;
+});
