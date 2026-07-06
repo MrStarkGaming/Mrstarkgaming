@@ -651,10 +651,10 @@ li{
 .pc-game::before{
     content:"";
     position:absolute;
-    top:10px;
-    left:10px;
-    width:30px;
-    height:30px;
+    top:5px;
+    left:5px;
+    width:25px;
+    height:25px;
     background:url("https://img.icons8.com/?size=100&id=M9BRw0RJZXKi&format=png&color=000000") center/contain no-repeat;
     z-index:100;
     filter:
@@ -666,10 +666,10 @@ li{
 .android-game::before{
     content:"";
     position:absolute;
-    top:10px;
-    left:10px;
-    width:30px;
-    height:30px;
+    top:5px;
+    left:5px;
+    width:25px;
+    height:25px;
     background:url("https://img.icons8.com/?size=100&id=Qn4GH3u6CYo5&format=png&color=000000") center/contain no-repeat;
     z-index:100;
     filter:
