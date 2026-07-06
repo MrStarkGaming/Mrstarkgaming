@@ -633,11 +633,48 @@ li{
 .game-card:hover {
   transform: translateY(-6px);
 
-  box-shadow: 0 0 15px #15ff34bb;
+  box-shadow: 0 0 12px #15ff34bb;
 }
 
 .game-card:hover img {
   transform: scale(1.05);
+}
+
+
+
+/* ==========================
+   PLATFORM ICONS
+========================== */
+
+/* PC Sections + Search */
+.pc-section .game-card::before,
+.pc-game::before{
+    content:"";
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:30px;
+    height:30px;
+    background:url("https://img.icons8.com/?size=100&id=M9BRw0RJZXKi&format=png&color=000000") center/contain no-repeat;
+    z-index:100;
+    filter:
+      drop-shadow(2px 2px 8px #000)
+      drop-shadow(0 0 10px rgba(0,0,0,.9));
+}
+
+.android-section .game-card::before,
+.android-game::before{
+    content:"";
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:30px;
+    height:30px;
+    background:url("https://img.icons8.com/?size=100&id=Qn4GH3u6CYo5&format=png&color=000000") center/contain no-repeat;
+    z-index:100;
+    filter:
+      drop-shadow(2px 2px 8px #000)
+      drop-shadow(0 0 10px rgba(0,0,0,.9));
 }
 
 /* Hover Gradient */
@@ -1575,6 +1612,13 @@ JARVIS AI CHAT
   font-size:12px !important;
   }
   
+.game-card{
+    position:relative;
+    overflow:hidden;
+}
+
+
+
   /* =========================
   JARVIS CHAT WINDOW
   ========================= */

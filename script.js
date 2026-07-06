@@ -134,7 +134,16 @@ searchBox.addEventListener("keyup", function () {
 
 
     if (matched) {
-      resultsBox.appendChild(card.cloneNode(true));
+      const clone = card.cloneNode(true);
+
+      if (card.closest("[id^='android-']")) {
+        clone.classList.add("android-game");
+    } else {
+        clone.classList.add("pc-game");
+    }
+
+resultsBox.appendChild(clone);
+      
     }
     if (resultsBox.children.length > 0) {
       resultsBox.style.display = "flex";
