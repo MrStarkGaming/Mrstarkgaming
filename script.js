@@ -705,76 +705,82 @@ const tips = [
 // =========================
 
 window.addEventListener("load", () => {
-
   const chat = document.getElementById("jarvis-chat");
   const header = document.querySelector(".jarvis-header");
+
+  if (!chat || !header) return;
 
   let dragging = false;
   let offsetX = 0;
   let offsetY = 0;
 
   header.addEventListener("mousedown", (e) => {
-
     dragging = true;
-
     const rect = chat.getBoundingClientRect();
-
     offsetX = e.clientX - rect.left;
     offsetY = e.clientY - rect.top;
-
     chat.style.left = rect.left + "px";
     chat.style.top = rect.top + "px";
     chat.style.right = "auto";
     chat.style.bottom = "auto";
-
   });
 
   document.addEventListener("mousemove", (e) => {
-
     if (!dragging) return;
-
-    chat.style.left =
-      (e.clientX - offsetX) + "px";
-
-    chat.style.top =
-      (e.clientY - offsetY) + "px";
-
+    chat.style.left = (e.clientX - offsetX) + "px";
+    chat.style.top = (e.clientY - offsetY) + "px";
   });
 
   document.addEventListener("mouseup", () => {
     dragging = false;
   });
 
-});
-header.addEventListener("touchstart", (e) => {
+  header.addEventListener("touchstart", (e) => {
+    dragging = true;
+    const rect = chat.getBoundingClientRect();
+    offsetX = e.touches[0].clientX - rect.left;
+    offsetY = e.touches[0].clientY - rect.top;
+    chat.style.left = rect.left + "px";
+    chat.style.top = rect.top + "px";
+    chat.style.right = "auto";
+    chat.style.bottom = "auto";
+  });
 
-  dragging = true;
+  document.addEventListener("touchmove", (e) => {
+    if (!dragging) return;
+    chat.style.left = (e.touches[0].clientX - offsetX) + "px";
+    chat.style.top = (e.touches[0].clientY - offsetY) + "px";
+  });
 
-  const rect = chat.getBoundingClientRect();
-
-  offsetX = e.touches[0].clientX - rect.left;
-  offsetY = e.touches[0].clientY - rect.top;
-
-  chat.style.left = rect.left + "px";
-  chat.style.top = rect.top + "px";
-  chat.style.right = "auto";
-  chat.style.bottom = "auto";
-
-});
-
-document.addEventListener("touchmove", (e) => {
-
-  if (!dragging) return;
-
-  chat.style.left =
-    (e.touches[0].clientX - offsetX) + "px";
-
-  chat.style.top =
-    (e.touches[0].clientY - offsetY) + "px";
-
+  document.addEventListener("touchend", () => {
+    dragging = false;
+  });
 });
 
-document.addEventListener("touchend", () => {
-  dragging = false;
-});
+// =========================================
+// AUTO REORDER: ANDROID FIRST ON MOBILE
+// =========================================
+window.addEventListener("DOMContentLoaded", () => {
+  const isAndroidOrMobile = /Android/i.test(navigator.userAgent) || window.innerWidth <= 768;
 
+  if (isAndroidOrMobile) {
+    const pcFirstSection = document.getElementById("pc-games");
+    if (!pcFirstSection || !pcFirstSection.parentNode) return;
+
+    const androidSectionIds = [
+      "android-trending-games",
+      "android-open-world-games",
+      "android-action-games",
+      "android-racing-games",
+      "android-shooting-games",
+      "android-offline-games"
+    ];
+
+    androidSectionIds.forEach((id) => {
+      const section = document.getElementById(id);
+      if (section) {
+        pcFirstSection.parentNode.insertBefore(section, pcFirstSection);
+      }
+    });
+  }
+});
