@@ -1,19 +1,19 @@
 /* =====================================================
    MR STARK GAMING - ORGANIZED CSS VERSION
    Sections:
-   1. BODY & GLOBAL
-   2. HERO
-   3. BUTTONS
-   4. SOCIAL
-   5. NAVBAR
-   6. SEARCH BAR
-   7. GAME GRID
-   8. CATEGORY BOXES
-   9. SLIDER ARROWS
-   10. FOOTER
-   11. FLOATING BUTTONS
-   12. JARVIS AI
-   13. MOBILE RESPONSIVE
+1. BODY & GLOBAL
+2. HERO
+3. BUTTONS
+4. SOCIAL
+5. NAVBAR
+6. SEARCH BAR
+7. GAME GRID
+8. CATEGORY BOXES
+9. SLIDER ARROWS
+10. FOOTER
+11. FLOATING BUTTONS
+12. JARVIS AI
+13. MOBILE RESPONSIVE
 ===================================================== */
 
 html,
@@ -94,8 +94,6 @@ body {
   }
 }
 
-
-
 .stark-hero h1 {
   font-size: 72px;
   margin: 0;
@@ -112,14 +110,10 @@ body {
   margin-top: 30px;
 }
 
-.btns {
-  margin-top: 30px;
-}
-
 .btn-primary,
 .btn-secondary,
 .btn-support {
-  display: inline-flex;;
+  display: inline-flex;
   padding: 14px 30px;
   width:auto;
   margin: 10px;
@@ -127,7 +121,6 @@ body {
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
-  
 }
 
 .btn-primary {
@@ -202,7 +195,6 @@ body {
   border-radius: 8px;
 }
 .social-icons {
-  
   display: flex;
   flex-direction: row !important;
   justify-content: center;
@@ -252,8 +244,6 @@ body {
 .social-icons a:nth-child(4) i {
   color: #5865f2;
 }
-
-
 
 .social-icons a:hover {
   transform: translateY(-5px);
@@ -315,11 +305,6 @@ body {
 
 .glass-nav nav {
   display: flex;
-  gap: 50px;
-}
-
-.glass-nav nav {
-  display: flex;
   align-items: center;
   gap: 50px;
 }
@@ -376,7 +361,6 @@ body {
 .glass-nav nav {
   justify-self: left;
 }
-
 
 .stark-section h2,
 .social h2 {
@@ -493,25 +477,12 @@ li{
   }
 }
 
-
-/* Nav Links */
-  
-
 /* Search Box */
 .nav-search{
   display:flex;
   align-items:center;
   width:210px;
   height:36px;
-
-  background:rgba(248, 0, 0, 0.05);
-  border:1px solid rgba(0,191,255,.35);
-  border-radius:30px;
-
-  overflow:hidden;
-  backdrop-filter:blur(10px);
-
-  box-shadow:0 0 10px rgba(0,191,255,.15);
 
   background: rgba(62, 102, 155, 0);
   border: 1px solid rgba(0, 191, 255, 0.35);
@@ -547,7 +518,6 @@ li{
 
 .nav-search input::placeholder {
   color: #94a3b8;
-
 }
 
 .nav-search button {
@@ -556,7 +526,6 @@ li{
   height:36px;
   border: none;
   cursor: pointer;
-  background: linear-gradient(135deg, #00bfff, #0099ff);
   background: transparent;
   color:  #00bfff;
   font-size: 16px;
@@ -644,15 +613,12 @@ li{
 }
 .game-card:hover {
   transform: translateY(-6px);
-
   box-shadow: 0 0 12px #15ff34bb;
 }
 
 .game-card:hover img {
   transform: scale(1.05);
 }
-
-
 
 /* ==========================
    PLATFORM ICONS
@@ -741,7 +707,6 @@ li{
 
   width: 0%;
   height: 3px;
-  
 
   background: linear-gradient(90deg,
   #ff3276, 
@@ -754,7 +719,6 @@ li{
   z-index: 999999;
 
   box-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
-  
 }
 @keyframes gradientMove{
   0%{background-position:0% 50%;}
@@ -762,12 +726,8 @@ li{
   100%{background-position:0% 50%;}
 }
 
-
-
 .category-box {
   width: 85%;
-  padding: 12px 20px;
-  margin-bottom: 8px; /* pehle 15px ya zyada hoga */
   padding: 10px 20px;
   margin-left: auto;
   margin-right: auto;
@@ -795,8 +755,6 @@ li{
 
 .category-box-2 {
   width: 85%;
-  padding: 12px 20px;
-  margin-bottom: 8px; /* pehle 15px ya zyada hoga */
   padding: 10px 20px;
   margin-left: auto;
   margin-right: auto;
@@ -837,7 +795,6 @@ li{
   border-bottom: 1px solid rgba(255, 0, 0, 0.3);
 
   color: #ffffff;
-  font-size: 42px; /* 25 se kam */
   font-weight: 700;
 
   text-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
@@ -862,11 +819,9 @@ li{
   border-bottom: 1px solid rgb(0, 191, 255, 0.3);
 
   color: #ffffff;
-  font-size: 42px; /* 25 se kam */
   font-weight: 700;
 
   text-shadow: 0 0 15px rgba(0, 191, 255, 0.5);
-  
 }
 
 /* =========================
@@ -939,15 +894,13 @@ li{
 .section-desc{
   font-size:15px !important;
   font-weight:500;
-
 }
 .game-category{
   text-decoration: none;
-  color: white; /* ya jo color chahiye */
+  color: white;
 }
 
-/* Mobile pe hide */
-/* Yha mobile viewe set ho rha hai */
+/* Footer */
 .footer {
   text-align: center;
   padding: 25px;
@@ -970,14 +923,11 @@ li{
   text-decoration:none;
   font-size:16px;
   font-weight:600;
-
 }
 
 .footer-links a:hover{
   color:#00bfff;
 }
-
-
 
 /* =========================
    FLOATING BUTTONS
@@ -1017,7 +967,6 @@ li{
 /* Tooltip */
 
 .floating-btn::after{
-
   content:attr(data-tooltip);
 
   position:absolute;
@@ -1050,25 +999,22 @@ li{
 }
 
 .floating-btn:hover::after{
-
   opacity:1;
   visibility:visible;
-
 }
 
 .help-btn{
   bottom:100px;
   background: #ff3b30;
-    color:#ffffff;
-
-    box-shadow: 0 0 12px rgba(255, 59, 48, 0.6), 0 0 24px rgba(255, 59, 48, 0.4);
+  color:#ffffff;
+  box-shadow: 0 0 12px rgba(255, 59, 48, 0.6), 0 0 24px rgba(255, 59, 48, 0.4);
 }
 
 .help-btn:hover{
-transform:translateY(-4px); 
-box-shadow:
-0 0 20px rgba(255, 0, 0, 0.9),
-0 0 40px rgba(255, 0, 0, 0.6);
+  transform:translateY(-4px); 
+  box-shadow:
+  0 0 20px rgba(255, 0, 0, 0.9),
+  0 0 40px rgba(255, 0, 0, 0.6);
 }
 .help-btn.show-tip::after{
   opacity:1 !important;
@@ -1077,17 +1023,13 @@ box-shadow:
 
 .top-btn{
   bottom:30px;
-  
   background:#22c55e;
-    color:#ffffff;
-
-    box-shadow: 0 0 12px rgba(34, 197, 94, 0.6), 0 0 24px rgba(0, 255, 55, 0.4);
-    
+  color:#ffffff;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.6), 0 0 24px rgba(0, 255, 55, 0.4);
 }
 
 .top-btn i{
   font-size:24px;
-   
 }
 
 .top-btn:hover{
@@ -1095,8 +1037,7 @@ box-shadow:
   box-shadow:
   0 0 20px rgba(9, 255, 0, 0.9),
   0 0 40px rgba(0, 255, 85, 0.6);
-  }
-
+}
 
 #jarvisBtn{
   position:fixed;
@@ -1131,23 +1072,22 @@ box-shadow:
   z-index:99999;
   
   transition:.3s ease;
-  }
+}
   
-  #jarvisBtn:hover{
+#jarvisBtn:hover{
   transform:translateY(-4px);
   
   box-shadow:
   0 0 20px rgba(0,191,255,.9),
   0 0 40px rgba(0,191,255,.6);
-  }
+}
   
-  #jarvisBtn i{
+#jarvisBtn i{
   font-size:24px;
   line-height:1;
-  }
- 
+}
 
-  /* =========================
+/* =========================
 JARVIS AI CHAT
 ========================= */
 
@@ -1155,7 +1095,6 @@ JARVIS AI CHAT
   flex:1;
   overflow-y:auto;
   padding:15px;
-
   scrollbar-width:none;
 }
 
@@ -1191,8 +1130,8 @@ JARVIS AI CHAT
   box-shadow:0 0 30px rgba(0,191,255,.25);
 }
   
-  .jarvis-header{
-    cursor:move;
+.jarvis-header{
+  cursor:move;
   user-select:none;
   display:flex;
   justify-content:space-between;
@@ -1203,59 +1142,59 @@ JARVIS AI CHAT
   background:#08111d;
   
   border-bottom:1px solid rgba(0,191,255,.15);
-  }
+}
   
-  .jarvis-header h3{
+.jarvis-header h3{
   margin:0;
   color:#00bfff;
-  }
+}
   
-  .jarvis-header p{
+.jarvis-header p{
   margin:2px 0 0;
   font-size:12px;
   color:#94a3b8;
-  }
+}
   
-  #jarvis-close{
+#jarvis-close{
   background:none;
   border:none;
   color:#fff;
   cursor:pointer;
   font-size:18px;
-  }
+}
   
-  #jarvis-messages{
-  flex:1;
-  overflow-y:auto;
-  padding:15px;
-  }
-  
-  .jarvis-user{
+.jarvis-user{
   background:#00bfffa1;
   padding:10px;
-  border:1px  solid rgba(225, 247, 255, 0.418);
+  border:1px solid rgba(225, 247, 255, 0.418);
   border-radius:12px;
   margin-bottom:10px;
   margin-left:40px;
-  }
+  white-space:pre-wrap;
+  word-break:break-word;
+  line-height:1.5;
+}
   
-  .jarvis-bot{
+.jarvis-bot{
   background:#111827;
   padding:10px;
   border:1px solid rgba(34, 197, 94, 0.6);
   border-radius:12px;
   margin-bottom:10px;
   margin-right:40px;
-  }
+  white-space:pre-wrap;
+  word-break:break-word;
+  line-height:1.5;
+}
   
-  .jarvis-input-box{
+.jarvis-input-box{
   display:flex;
   gap:8px;
   padding:10px;
   border-top:1px solid rgba(0,191,255,.15);
-  }
+}
   
-  #jarvis-input{
+#jarvis-input{
   flex:1;
   background:#111;
   border:none;
@@ -1263,58 +1202,58 @@ JARVIS AI CHAT
   color:#fff;
   border-radius:10px;
   padding:12px;
-  }
+}
   
-  #jarvis-send{
+#jarvis-send{
   width:45px;
   border:none;
   border-radius:10px;
   background:#00bfff;
   color:#fff;
   cursor:pointer;
-  }
+}
   
-  #jarvisBtn::after{
-    content:attr(data-tooltip);
+#jarvisBtn::after{
+  content:attr(data-tooltip);
+
+  position:absolute;
+
+  right:75px;
+  top:50%;
+
+  transform:translateY(-50%);
+
+  background:#0b0b0b;
+  color:#fff;
+
+  padding:8px 12px;
+
+  border-radius:8px;
+
+  font-size:13px;
+  font-weight:600;
+
+  white-space:nowrap;
+
+  border:1px solid rgba(0,191,255,.4);
+
+  box-shadow:0 0 15px rgba(0,191,255,.25);
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:.3s;
+}
   
-    position:absolute;
+#jarvisBtn:hover::after{
+  opacity:1;
+  visibility:visible;
+}
   
-    right:75px;
-    top:50%;
-  
-    transform:translateY(-50%);
-  
-    background:#0b0b0b;
-    color:#fff;
-  
-    padding:8px 12px;
-  
-    border-radius:8px;
-  
-    font-size:13px;
-    font-weight:600;
-  
-    white-space:nowrap;
-  
-    border:1px solid rgba(0,191,255,.4);
-  
-    box-shadow:0 0 15px rgba(0,191,255,.25);
-  
-    opacity:0;
-    visibility:hidden;
-  
-    transition:.3s;
-  }
-  
-  #jarvisBtn:hover::after{
-    opacity:1;
-    visibility:visible;
-  }
-  
-  #jarvisBtn.show-tip::after{
-    opacity:1 !important;
-    visibility:visible !important;
-  }
+#jarvisBtn.show-tip::after{
+  opacity:1 !important;
+  visibility:visible !important;
+}
 
 .jarvis-icon{
   width:34px;
@@ -1323,351 +1262,233 @@ JARVIS AI CHAT
   border-radius:50%;
 }
 
-  
 /* =========================
    Android
 ========================= */
 
-
 @media (max-width:768px){
 
-  /* =========================
-  SLIDER ARROWS
-  ========================= */
-  
+  /* SLIDER ARROWS */
   .slider-hint{
-  display:none;
+    display:none;
   }
   
-  /* =========================
-  NAVBAR
-  ========================= */
-  
+  /* NAVBAR */
   .navbar{
-  padding:0 15px;
+    padding:0 15px;
   }
   
   .glass-nav{
-  position:fixed;
-  top:10px;
-  left:50%;
-  transform:translateX(-50%);
-  
- 
-  display:flex !important;
-  align-items:center !important;
-  justify-content:space-between !important;
-  
-  height:60px !important;
-  padding:0 15px !important;
-  
-  overflow:visible;
-
-  
+    position:fixed;
+    top:10px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    height:60px !important;
+    padding:0 15px !important;
+    overflow:visible;
   }
   
-  /* =========================
-  LOGO
-  ========================= */
-  
+  /* LOGO */
   .logo{
-  flex-shrink:0;
-  margin-right:auto;
-  margin-left:0;
+    flex-shrink:0;
+    margin-right:auto;
+    margin-left:0;
   }
   
   .logo img{
-  height:30px;
-  max-width:150px;
-  margin-right:auto;
-  margin-top:15px;
+    height:30px;
+    max-width:150px;
+    margin-right:auto;
+    margin-top:15px;
   }
   
-  /* =========================
-  SEARCH BAR
-  ========================= */
-  
+  /* SEARCH BAR */
   .nav-search{
-  flex-shrink:0;
-  
-  
-  position:absolute;
-  top:50%;
-  right:55px;
-  
-  transform:translateY(-50%);
-  
-  width:160px;
-  height:36px;
-  
-  z-index:1000;
- 
-  
+    flex-shrink:0;
+    position:absolute;
+    top:50%;
+    right:55px;
+    transform:translateY(-50%);
+    width:160px;
+    height:36px;
+    z-index:1000;
   }
   
   .nav-search input{
-  background:transparent !important;
-  background-color:transparent !important;
-  
- 
-  border:none !important;
-  outline:none !important;
-  box-shadow:none !important;
-  
-  color:#fff !important;
-  caret-color:#00bfff;
-  
-  font-size:12px;
-  padding:0 10px !important;
-  
-  flex:1;
-  
-  -webkit-appearance:none !important;
-  appearance:none !important;
-  
-  
+    background:transparent !important;
+    background-color:transparent !important;
+    border:none !important;
+    outline:none !important;
+    box-shadow:none !important;
+    color:#fff !important;
+    caret-color:#00bfff;
+    font-size:12px;
+    padding:0 10px !important;
+    flex:1;
+    -webkit-appearance:none !important;
+    appearance:none !important;
   }
   
   .nav-search button{
-  display:flex !important;
-  align-items:center;
-  justify-content:center;
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
   }
   
   .nav-search button i{
-  color:#00bfff !important;
-  font-size:18px !important;
+    color:#00bfff !important;
+    font-size:18px !important;
   }
   
-  /* =========================
-  HAMBURGER MENU
-  ========================= */
-  
+  /* HAMBURGER MENU */
   .menu-btn{
-  display:block !important;
-  
-  
-  position:absolute;
-  right:15px;
-  top:45%;
-  
-  transform:translateY(-50%);
-  
-  z-index:10001;
-  
-  
+    display:block !important;
+    position:absolute;
+    right:15px;
+    top:45%;
+    transform:translateY(-50%);
+    z-index:10001;
   }
   
-  /* =========================
-  MOBILE MENU
-  ========================= */
-  
+  /* MOBILE MENU */
   .nav-links{
-  display:none !important;
-  
- 
-  position:absolute;
-  top:65px;
-  left:50%;
-  
-  transform:translateX(-50%);
-  
-  width:90%;
-  
-  background:#0f172a;
-  
-  border-radius:12px;
-  
-  padding:20px 0;
-  
-  flex-direction:column;
-  align-items:center;
-  
-  gap:20px;
-  
-  box-shadow:0 10px 25px rgba(0,0,0,.4);
- 
-  
+    display:none !important;
+    position:absolute;
+    top:65px;
+    left:50%;
+    transform:translateX(-50%);
+    width:90%;
+    background:#0f172a;
+    border-radius:12px;
+    padding:20px 0;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
   }
   
   .nav-links.active{
-  display:flex !important;
+    display:flex !important;
   }
   
-  /* =========================
-  HERO SECTION
-  ========================= */
-  
+  /* HERO SECTION */
   .hero-logo{
-  width:220px !important;
-  max-width:80%;
-  height:auto;
+    width:220px !important;
+    max-width:80%;
+    height:auto;
   }
   
   .stark-hero{
-  min-height:10vh;
+    min-height:10vh;
   }
   
   .stark-hero p{
-  font-size:16px !important;
-  line-height:1.4;
-  padding:0 15px;
+    font-size:16px !important;
+    line-height:1.4;
+    padding:0 15px;
   }
   
   .section-desc{
-  font-size:11px !important;
-  font-weight:500;
-  text-align:left;
-  line-height:1.6;
+    font-size:11px !important;
+    font-weight:500;
+    text-align:left;
+    line-height:1.6;
   }
   
-  /* =========================
-  HERO BUTTONS
-  ========================= */
-  
+  /* HERO BUTTONS */
   .btns{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:10px;
-  flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
   }
   
   .btn-primary,
   .btn-secondary,
   .btn-support{
-  display:inline-flex;
-  
-
-  justify-content:center;
-  align-items:center;
-  
-  width:auto;
-  min-width:unset;
-  
-  padding:10px 16px;
-  
-  font-size:13px;
-  
-  margin:10px;
-  
-  border-radius:8px;
-
-  
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:auto;
+    min-width:unset;
+    padding:10px 16px;
+    font-size:13px;
+    margin:10px;
+    border-radius:8px;
   }
   
-  /* =========================
-  CATEGORY HEADINGS
-  ========================= */
-  
+  /* CATEGORY HEADINGS */
   .game-category{
-  font-size:18px !important;
-  
- 
-  margin-bottom:12px !important;
-  
-  color:#fff;
-  text-align:center;
-  
-  
+    font-size:18px !important;
+    margin-bottom:12px !important;
+    color:#fff;
+    text-align:center;
   }
   
   .category-box,
   .category-box-2,
   .category-box-6{
-  width:95% !important;
-  
- 
-  margin:0 auto 18px auto !important;
-  
-  padding:10px !important;
-  
-  text-align:center;
-
-  
+    width:95% !important;
+    margin:0 auto 18px auto !important;
+    padding:10px !important;
+    text-align:center;
   }
   
   .category-box-text h1,
   .category-box-text h2,
   .category-box-textb h1,
   .category-box-textb h2{
-  font-size:25px !important;
-  
-  
-  line-height:1.1;
-  
-  margin:10px auto 20px;
-  
-  text-align:center;
-  
-  
+    font-size:25px !important;
+    line-height:1.1;
+    margin:10px auto 20px;
+    text-align:center;
   }
   
-  /* =========================
-  GAME CARDS
-  ========================= */
-  
+  /* GAME CARDS */
   .games-grid{
-  padding:0 10px 15px;
+    padding:0 10px 15px;
   }
   
   .game-card{
-  flex:0 0 105px !important;
+    flex:0 0 105px !important;
+    position:relative;
+    overflow:hidden;
   }
   
   .game-card img{
-  width:100%;
-  height:auto;
+    width:100%;
+    height:auto;
   }
   
   .game-overlay h3{
-  font-size:12px !important;
+    font-size:12px !important;
   }
-  
-.game-card{
-    position:relative;
-    overflow:hidden;
-}
 
-
-
-  /* =========================
-  JARVIS CHAT WINDOW
-  ========================= */
-  
+  /* JARVIS CHAT WINDOW */
   #jarvis-chat{
-  width:92% !important;
-  height:70vh !important;
-  
- 
-  right:4% !important;
-  bottom:80px !important;
- 
-  
+    width:92% !important;
+    height:70vh !important;
+    right:4% !important;
+    bottom:80px !important;
   }
   
-  /* =========================
-  FLOATING BUTTONS
-  ========================= */
-  
+  /* FLOATING BUTTONS */
   .floating-btn,
   #jarvisBtn{
-  width:48px;
-  height:48px;
-  
-
-  right:18px;
-  
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  
+    width:48px;
+    height:48px;
+    right:18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
   
   .help-btn{
- 
-  bottom:130px;
+    bottom:130px;
   }
   
   .top-btn{
@@ -1675,43 +1496,34 @@ JARVIS AI CHAT
   }
   
   #jarvisBtn{
-  bottom:190px;
+    bottom:190px;
   }
   
   .top-btn i,
   .help-btn i,
   #jarvisBtn i{
-  font-size:22px;
+    font-size:22px;
   }
   
-  /* =========================
-  FOOTER
-  ========================= */
-  
+  /* FOOTER */
   .footer{
-  padding:20px 15px;
-  
-
-  font-size:13px;
-  
-  margin-top:20px;
-
-  
+    padding:20px 15px;
+    font-size:13px;
+    margin-top:20px;
   }
   
   .footer-links{
-  gap:12px;
-  margin-bottom:15px;
+    gap:12px;
+    margin-bottom:15px;
   }
   
   .footer-links a{
-  font-size:14px;
+    font-size:14px;
   }
-  
-  }
+}
   
 /* =====================================================
-   14. SINGLE HORIZONTAL PARTNER BANNER
+14. SINGLE HORIZONTAL PARTNER BANNER
 ===================================================== */
 .partner-section {
   padding: 10px 25px;
@@ -1874,4 +1686,3 @@ JARVIS AI CHAT
     box-sizing: border-box;
   }
 }
-
