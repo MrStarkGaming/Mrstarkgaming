@@ -1165,26 +1165,30 @@ JARVIS AI CHAT
   
 .jarvis-user{
   background:#00bfffa1;
-  padding:10px;
+  padding:10px 12px;
   border:1px solid rgba(225, 247, 255, 0.418);
   border-radius:12px;
   margin-bottom:10px;
   margin-left:40px;
-  white-space:pre-wrap;
+  white-space:pre-line;
   word-break:break-word;
-  line-height:1.5;
+  line-height:1.45;
 }
   
 .jarvis-bot{
   background:#111827;
-  padding:10px;
+  padding:10px 12px;
   border:1px solid rgba(34, 197, 94, 0.6);
   border-radius:12px;
   margin-bottom:10px;
   margin-right:40px;
-  white-space:pre-wrap;
+  white-space:pre-line;
   word-break:break-word;
-  line-height:1.5;
+  line-height:1.45;
+}
+
+.jarvis-bot:first-child{
+  white-space:normal;
 }
   
 .jarvis-input-box{
